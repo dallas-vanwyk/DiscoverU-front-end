@@ -7,6 +7,7 @@ import SignUpForm from "./components/SignUpForm/SignUpForm";
 import SignInForm from "./components/SignInForm/SignInForm";
 import Landing from "./components/Landing/Landing";
 import Dashboard from "./components/Dashboard/Dashboard";
+import HomePage from "./components/HomePage/HomePage";
 import { UserContext } from "./contexts/UserContext";
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
     <>
       <NavBar />
       <Routes>
-        <Route path="/" element={user ? <Dashboard /> : <Landing />} />
+        <Route path="/" element={user ? <HomePage /> : <Landing />} />
         <Route path="/sign-up" element={<SignUpForm />} />
         <Route path="/sign-in" element={<SignInForm />} />
       </Routes>
