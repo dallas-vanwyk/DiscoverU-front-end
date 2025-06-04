@@ -11,12 +11,16 @@ const SignUpForm = () => {
   const { setUser } = useContext(UserContext);
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
+    // avatar: "",
     username: "",
+    firstname: "",
+    lastname: "",
+    email: "",
     password: "",
     passwordConf: "",
   });
 
-  const { username, password, passwordConf } = formData;
+  const { username, firstname, lastname, email, password, passwordConf } = formData;
 
   const handleChange = (evt) => {
     setMessage("");
@@ -43,11 +47,20 @@ const SignUpForm = () => {
       <h1>Sign Up</h1>
       <p>{message}</p>
       <form onSubmit={handleSubmit}>
+        {/* <div>
+          <label htmlFor="avatar">Select Avatar</label>
+          <input type="number" 
+          id="avatar"
+          value={avatar}
+          name="avatar"
+          onChange={handleChange}
+          />
+        </div> */}
         <div>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
-            id="name"
+            id="username"
             value={username}
             name="username"
             onChange={handleChange}
@@ -56,6 +69,39 @@ const SignUpForm = () => {
         </div>
         <br />
 
+        <div>
+          <label htmlFor="firstname">First Name:</label>
+          <input type="text" 
+          id="firstname"
+          value={firstname}
+          name="firstname"
+          onChange={handleChange}
+          required
+          />
+        </div>
+        <br />
+        <div>
+          <label htmlFor="lastname">Last Name:</label>
+          <input type="text" 
+          id="lastname"
+          value={lastname}
+          name="lastname"
+          onChange={handleChange}
+          required
+          />
+        </div>
+        <br />
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input type="email"
+          id="email"
+          value={email}
+          name="email"
+          onChange={handleChange}
+          required
+          />
+        </div>
+        <br />
         <div>
           <label htmlFor="password">Password:</label>
           <input

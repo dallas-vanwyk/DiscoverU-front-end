@@ -22,11 +22,16 @@ const SignInForm = () => {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-    try {
-      // This function doesn't exist yet, but we'll create it soon.
-      // It will cause an error right now
-      const signedInUser = await signIn(formData);
 
+    const isEmail = formData.username.includes('@');
+
+    const payload = {
+      [isEmail ? 'email' : 'username']: formData.username,
+      password: formData.password
+    }
+
+    try {
+      const signedInUser = await signIn(payload);
       setUser(signedInUser);
       navigate("/");
     } catch (err) {
@@ -40,7 +45,7 @@ const SignInForm = () => {
       <p>{message}</p>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Username:</label>
+          <label htmlFor="username">Email or Username:</label>
           <input
             type="text"
             autoComplete="off"
@@ -51,6 +56,7 @@ const SignInForm = () => {
             required
           />
         </div>
+        <br />
         <div>
           <label htmlFor="password">Password:</label>
           <input
