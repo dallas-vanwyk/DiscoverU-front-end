@@ -20,15 +20,15 @@ const SignInForm = () => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
 
-  const handleSubmit = async (evt) => {
+const handleSubmit = async (evt) => {
     evt.preventDefault();
 
-    const isEmail = formData.username.includes('@');
+    // const isEmail = formData.username.includes('@');
 
     const payload = {
-      [isEmail ? 'email' : 'username']: formData.username,
-      password: formData.password
-    }
+      username: formData.username,
+      password: formData.password,
+    };
 
     try {
       const signedInUser = await signIn(payload);

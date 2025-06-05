@@ -61,7 +61,7 @@ const SignUpForm = () => {
           <input
             type="text"
             id="username"
-            value={username}
+            value={formData.username}
             name="username"
             onChange={handleChange}
             required
@@ -73,7 +73,7 @@ const SignUpForm = () => {
           <label htmlFor="firstname">First Name:</label>
           <input type="text" 
           id="firstname"
-          value={firstname}
+          value={formData.firstname}
           name="firstname"
           onChange={handleChange}
           required
@@ -84,7 +84,7 @@ const SignUpForm = () => {
           <label htmlFor="lastname">Last Name:</label>
           <input type="text" 
           id="lastname"
-          value={lastname}
+          value={formData.lastname}
           name="lastname"
           onChange={handleChange}
           required
@@ -107,7 +107,7 @@ const SignUpForm = () => {
           <input
             type="password"
             id="password"
-            value={password}
+            value={formData.password}
             name="password"
             onChange={handleChange}
             required
@@ -119,7 +119,7 @@ const SignUpForm = () => {
           <input
             type="password"
             id="confirm"
-            value={passwordConf}
+            value={formData.passwordConf}
             name="passwordConf"
             onChange={handleChange}
             required
