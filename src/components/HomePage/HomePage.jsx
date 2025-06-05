@@ -1,4 +1,4 @@
-//
+// src/components/HomePage.jsx
 
 import { useNavigate } from "react-router";
 
@@ -7,7 +7,9 @@ const HomePage = () => {
 
   return (
     <main>
-      <button onClick={() => navigate("/")}>Personality Test</button>
+      <button onClick={() => navigate("/personality-test")}>
+        Personality Test
+      </button>
       <button onClick={() => navigate("/")}>Network</button>
       <button onClick={() => navigate("/")}>Career Professions</button>
     </main>

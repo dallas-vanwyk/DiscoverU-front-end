@@ -16,10 +16,16 @@ const NavBar = () => {
     <nav>
       {user ? (
         <ul>
-          <li>Welcome, {user.username}</li>
           <li>
-            <Link to="/">Dashboard</Link>
+            <Link to="/">Home</Link>
           </li>
+          <li>
+            <Link to="/">Network</Link>
+          </li>
+          <li>
+            <Link to="/">Game</Link>
+          </li>
+          <li>More</li>
           <li>
             <Link to="/" onClick={handleSignOut}>
               Sign Out

@@ -8,6 +8,7 @@ import SignInForm from "./components/SignInForm/SignInForm";
 import Landing from "./components/Landing/Landing";
 import Dashboard from "./components/Dashboard/Dashboard";
 import HomePage from "./components/HomePage/HomePage";
+import PersonalityTest from "./components/PersonalityTest/PersonalityTest.jsx";
 import { UserContext } from "./contexts/UserContext";
 
 const App = () => {
@@ -15,12 +16,13 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
       <Routes>
         <Route path="/" element={user ? <HomePage /> : <Landing />} />
         <Route path="/sign-up" element={<SignUpForm />} />
         <Route path="/sign-in" element={<SignInForm />} />
+        <Route path="/personality-test" element={<PersonalityTest />} />
       </Routes>
+      <NavBar />
     </>
   );
 };
