@@ -15,7 +15,7 @@ const SignInForm = () => {
     password: "",
   });
 
-  const handleChange = (evt) => {         
+  const handleChange = (evt) => {   
     setMessage("");
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };

@@ -32,8 +32,7 @@ const NavBar = () => {
             <Link to="/"><LuGamepad2/>
             <br />Game</Link>
           </li>
-          <li><CgDetailsMore/>
-          <br />More</li>
+          <li>More</li>
           <li>
             <Link to="/" onClick={handleSignOut}>
               Sign Out
