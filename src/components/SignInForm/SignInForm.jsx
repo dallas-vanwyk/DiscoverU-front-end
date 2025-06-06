@@ -41,7 +41,8 @@ const handleSubmit = async (evt) => {
 
   return (
     <main>
-      <h1>Sign In</h1>
+      <h1>Log In</h1>
+      <img src="images/main-app/login.svg" alt="Icon" />
       <p>{message}</p>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div>
