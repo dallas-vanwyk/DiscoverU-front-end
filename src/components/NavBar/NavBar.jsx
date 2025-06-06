@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { RiHome2Line } from 'react-icons/ri';
 import { FaPeopleGroup } from 'react-icons/fa6';
 import { LuGamepad2 } from 'react-icons/lu';
+import { CgDetailsMore } from 'react-icons/cg';
 
 import { UserContext } from "../../contexts/UserContext";
 
@@ -31,7 +32,8 @@ const NavBar = () => {
             <Link to="/"><LuGamepad2/>
             <br />Game</Link>
           </li>
-          <li>More</li>
+          <li><CgDetailsMore/>
+          <br />More</li>
           <li>
             <Link to="/" onClick={handleSignOut}>
               Sign Out
