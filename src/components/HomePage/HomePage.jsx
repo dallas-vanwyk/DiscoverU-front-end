@@ -15,7 +15,7 @@ const HomePage = () => {
       <br />
       <button onClick={() => navigate("/")}>Network</button>
       <br />
-      <button onClick={() => navigate("/")}>Career Professions</button>
+      <button onClick={() => navigate("/city")}>Career Professions</button>
     </main>
   );
 };
