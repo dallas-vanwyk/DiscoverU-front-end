@@ -5,6 +5,7 @@ import { FaPeopleGroup } from 'react-icons/fa6';
 import { LuGamepad2 } from 'react-icons/lu';
 import { CgDetailsMore } from 'react-icons/cg';
 
+
 import { UserContext } from "../../contexts/UserContext";
 
 const NavBar = () => {
@@ -21,18 +22,29 @@ const NavBar = () => {
       {user ? (
         <ul>
           <li>
-            <Link to="/"><RiHome2Line/>
-            <br />Home</Link>
+            <Link to="/">
+              {/* <RiHome2Line /> */}
+              <br />
+              <img src="images/icons/Home.svg" alt="Icon" />
+            </Link>
           </li>
           <li>
-            <Link to="/"><FaPeopleGroup/>
-            <br />Network</Link>
+            <Link to="/">
+              {/* <FaPeopleGroup /> */}
+              <br />
+              <img src="images/icons/Network.svg" alt="Icon" />
+            </Link>
           </li>
           <li>
-            <Link to="/"><LuGamepad2/>
-            <br />Game</Link>
+            <Link to="/">
+              {/* <LuGamepad2 /> */}
+              <br />
+              <img src="images/icons/explore.svg" alt="Icon" />
+            </Link>
           </li>
-          <li>More</li>
+          <li>
+            <img src="images/icons/Game.svg" alt="Icon" />
+          </li>
           <li>
             <Link to="/" onClick={handleSignOut}>
               Sign Out
