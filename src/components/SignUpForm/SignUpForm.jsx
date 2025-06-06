@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 
 import { signUp } from "../../services/authService.js";
 import { UserContext } from "../../contexts/UserContext";
+import SelectAvatar  from '../SelectAvatar/SelectAvatar.jsx';
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ const SignUpForm = () => {
       <h1>Sign Up</h1>
       <p>{message}</p>
       <form onSubmit={handleSubmit}>
+        <SelectAvatar />
         {/* <div>
           <label htmlFor="avatar">Select Avatar</label>
           <input type="number" 
