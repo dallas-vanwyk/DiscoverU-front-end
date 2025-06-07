@@ -6,16 +6,21 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <main>
-      <img src="images/main-app/home-page.svg" alt="Icon" />
-      <br />
+    <main className="homepage">
+      <img
+        src="images/main-app/home-page-crop.png"
+        alt="people discussing at table"
+        className="floating-content homepage-image"
+      />
       <button onClick={() => navigate("/personality-test")}>
         Personality Test
       </button>
-      <br />
-      <button onClick={() => navigate("/")}>Network</button>
-      <br />
-      <button onClick={() => navigate("/city")}>Career Professions</button>
+      <button onClick={() => navigate("/")}>
+        Network
+      </button>
+      <button onClick={() => navigate("/city")}>
+        Career Professions
+      </button>
     </main>
   );
 };
