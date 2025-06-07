@@ -16,6 +16,10 @@
   --pbg-bot: #600262;
 }
 
+.root {
+  margin: 0;
+}
+
 body {
   background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot));
 }
@@ -51,12 +55,13 @@ nav ul {
 
 .homepage-image {
   background: #ffffff55;
-  width: 100%;
+  width: 90%;
 }
 
 .homepage {
   display: flex;
   flex-direction: column;
+  
 }
 
 /* buttonsssssss */
