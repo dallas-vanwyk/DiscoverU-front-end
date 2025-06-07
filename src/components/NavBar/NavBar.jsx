@@ -17,7 +17,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav>
+    <nav className="bottom-navbar">
       {user ? (
         <ul>
           <li>

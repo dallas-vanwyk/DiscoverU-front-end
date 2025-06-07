@@ -26,7 +26,7 @@ body {
 
 /* navigation at bottom of screen */
 
-nav {
+/* nav {
   background-color: var(--menu-background);
   padding: 0;
   margin: 0;
@@ -41,6 +41,54 @@ nav ul {
   justify-content: space-around;
   margin: 0;
   padding: 10px 0 0 0;
+}
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; 
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+} */
+
+/* Bottom Navbar */
+.bottom-navbar {
+  background-color: var(--menu-background);
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.bottom-navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+/* Top Navbar */
+.top-navbar {
+  background-color: #28004a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+}
+
+.top-navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 10px 0;
 }
 
 /* main content blocks */

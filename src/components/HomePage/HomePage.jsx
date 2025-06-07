@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import NavBar from "../NavBar/NavBar.jsx";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import TopNavBar from "../TopNavBar/TopNavBar.jsx";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -11,13 +12,14 @@ const HomePage = () => {
 
   return (
     <>
+      <TopNavBar />
       <main className="homepage">
         {user?.avatar !== undefined && (
-        <img
-          src={`/images/avatars/${user.avatar}`}
-          alt="User Avatar"
-          style={{ width: "80px", borderRadius: "50%", marginBottom: "1rem" }}
-        />
+          <img
+            src={`/images/avatars/${user.avatar}`}
+            alt="User Avatar"
+            style={{ width: "80px", borderRadius: "50%", marginBottom: "1rem" }}
+          />
         )}
         <img
           src="images/main-app/home-page-crop.png"

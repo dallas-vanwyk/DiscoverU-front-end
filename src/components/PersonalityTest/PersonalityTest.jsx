@@ -1,10 +1,18 @@
 // src/components/PersonalityTest.jsx
-
+import { useNavigate } from "react-router";
+import { Link } from "react-router";
 import NavBar from "../NavBar/NavBar.jsx";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <>
+      <nav className="top-navbar">
+        <Link onClick={() => navigate(-1)}>
+          <img src="images/icons/back-arrow.svg" alt="Explore" />
+        </Link>
+      </nav>
       <main>
         <p>Discover your inner traits</p>
         <img src="images/main-app/personality-test.svg" alt="Icon" />
