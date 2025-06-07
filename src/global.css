@@ -1,6 +1,7 @@
 /* src/global.css */
 
 :root {
+  /* global color variables */
   --light-blue-background: #c7d3ff; /* used for search bar as well as some pages */ /* search bar 80% opacity */
   --light-purple-button: #ba68c8;
   --off-purple-unselected-button: #8163d6; /* 15% opacity */
@@ -14,14 +15,25 @@
   --pbg-top: #2c0a61;
   --pbg-mid: #4f0067;
   --pbg-bot: #600262;
-}
 
-.root {
-  margin: 0;
+  /* stuff from default index.css - not 100% sure what all this is doing for us tbh */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot));
+
+  /* stuff from default index.css - have not confirmed */
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 /* navigation at bottom of screen */
@@ -77,4 +89,21 @@ button {
   font-weight: 800;
   margin: 10px 20px;
   border-radius: 40px;
+  background-color: #ffffff;
+
+  /* from original index.css - have not vetted */
+  padding: 0.6em 1.2em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+/* button stuff from original index.css */
+
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
