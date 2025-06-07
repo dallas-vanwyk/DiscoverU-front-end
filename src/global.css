@@ -1,0 +1,25 @@
+/* src/global.css */
+/*  */
+
+:root {
+    --light-blue-background: #C7D3FF; /* used for search bar as well as some pages */ /* search bar 80% opacity */
+    --light-purple-button: #BA68C8;
+
+    --off-purple-unselected-button: #8163D6; /* 15% opacity */
+
+    --light-card-background: #F2F4FE;
+
+    --dark-purple-menu: #28004A;
+
+    --button-pink: #BA68C8;
+
+    /* purple background gradient */
+    --pbg-top: #2C0A61;
+    --pbg-mid: #4F0067;
+    --pbg-bot: #600262;
+}
+
+main {
+    /* background-color: var(--pbg-mid); */
+    background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot));
+}
