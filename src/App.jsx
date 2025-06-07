@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { Routes, Route } from "react-router";
 import "./App.css";
+import "./global.css";
 
-import NavBar from "./components/NavBar/NavBar";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import SignInForm from "./components/SignInForm/SignInForm";
 import Landing from "./components/Landing/Landing";
@@ -23,7 +23,6 @@ const App = () => {
         <Route path="/personality-test" element={<PersonalityTest />} />
         <Route path="/city" element={<Game />} />
       </Routes>
-      <NavBar />
     </>
   );
 };
