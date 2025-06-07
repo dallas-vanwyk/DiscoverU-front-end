@@ -34,7 +34,7 @@ const SignUpForm = () => {
 		evt.preventDefault();
 		try {
 			const newUser = await signUp(formData);
-			setUser(newUser);
+			setUser({ ...newUser, avatar: formData.avatar });
 			navigate("/");
 		} catch (err) {
 			setMessage(err.message);
