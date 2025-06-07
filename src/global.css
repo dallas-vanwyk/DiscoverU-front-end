@@ -13,6 +13,10 @@
 
     --button-pink: #BA68C8;
 
+    --gray-background: #EEEEEE;
+
+    --menu-background: #EDF0FC;
+
     /* purple background gradient */
     --pbg-top: #2C0A61;
     --pbg-mid: #4F0067;
@@ -20,6 +24,19 @@
 }
 
 main {
-    /* background-color: var(--pbg-mid); */
     background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot));
+}
+
+nav {
+    background-color: var(--menu-background);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav li {
+
 }

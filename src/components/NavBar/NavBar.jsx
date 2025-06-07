@@ -23,34 +23,30 @@ const NavBar = () => {
           <li>
             <Link to="/">
               {/* <RiHome2Line /> */}
-              <br />
-              <img src="images/icons/Home.svg" alt="Icon" />
+              <img src="images/icons/Home.svg" alt="Home" />
             </Link>
           </li>
           <li>
             <Link to="/">
               {/* <FaPeopleGroup /> */}
-              <br />
-              <img src="images/icons/Network.svg" alt="Icon" />
+              <img src="images/icons/Network.svg" alt="Network" />
             </Link>
           </li>
           <li>
             <Link to="/">
-              {/* <LuGamepad2 /> */}
-              <br />
-              <img src="images/icons/explore.svg" alt="Icon" />
+              <img src="images/icons/explore.svg" alt="Explore" />
             </Link>
           </li>
           <li>
             <Link to="/city">
-              <img src="images/icons/Game.svg" alt="Icon" />
+              <img src="images/icons/Game.svg" alt="Game" />
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/" onClick={handleSignOut}>
               Sign Out
             </Link>
-          </li>
+          </li> */}
         </ul>
       ) : (
         <ul>
