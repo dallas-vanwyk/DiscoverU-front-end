@@ -36,26 +36,7 @@ body {
   min-height: 100vh;
 }
 
-/* navigation at bottom of screen */
-
-/* nav {
-  background-color: var(--menu-background);
-  padding: 0;
-  margin: 0;
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 10px 0 0 0;
-}
-
-.top-navbar {
+/* .top-navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -66,6 +47,7 @@ nav ul {
 } */
 
 /* Bottom Navbar */
+
 .bottom-navbar {
   background-color: var(--menu-background);
   padding: 0;
@@ -73,7 +55,7 @@ nav ul {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  z-index: 999;
+  z-index: 999; /* what is this for? */
 }
 
 .bottom-navbar ul {
@@ -85,8 +67,9 @@ nav ul {
 }
 
 /* Top Navbar */
+
 .top-navbar {
-  background-color: #28004a;
+  background-color: var(--dark-purple-menu);
   position: fixed;
   top: 0;
   left: 0;
@@ -101,6 +84,7 @@ nav ul {
   justify-content: space-around;
   margin: 0;
   padding: 10px 0;
+  color: white;
 }
 
 /* main content blocks */
