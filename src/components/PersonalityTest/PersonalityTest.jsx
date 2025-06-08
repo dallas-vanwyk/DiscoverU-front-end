@@ -28,7 +28,7 @@ const HomePage = () => {
           rel="noopener noreferrer"
         >
           <br />
-          <button>Test It Out!</button>
+          <button className="button-pink">Test It Out!</button>
         </a>
       </main>
       <NavBar />
