@@ -1,10 +1,23 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { Link } from "react-router";
+import { useNavigate } from "react-router";
+
+import { UserContext } from "../../contexts/UserContext";
 
 const Game = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
     textField: "",
   });
+  const { user, setUser } = useContext(UserContext);
+
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+
+    setUser(null);
+  };
 
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
@@ -16,6 +29,35 @@ const Game = () => {
     case 0:
       return (
         <div>
+          <nav className="top-navbar">
+            <ul>
+              <li>
+                <Link onClick={() => navigate(-1)}>
+                  <img src="images/icons/back-arrow.svg" alt="Explore" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Network</Link>
+              </li>
+              <li>
+                <Link to="/">Explore</Link>
+              </li>
+              <li>
+                <Link to="/">Messages</Link>
+              </li>
+              <li>
+                <Link to="/">Progress Tracker</Link>
+              </li>
+              <li>
+                <Link to="/" onClick={handleSignOut}>
+                  Sign Out
+                </Link>
+              </li>
+            </ul>
+          </nav>
           <img src="images/game/background.svg" alt="Icon" />
           <h1>DiscoverU City</h1>
           <button onClick={() => setStep(1)}>Start Game</button>
