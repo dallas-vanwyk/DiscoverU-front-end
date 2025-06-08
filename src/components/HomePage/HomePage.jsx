@@ -11,7 +11,7 @@ const HomePage = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <>
+    <div className="purple-gradient">
       <TopNavBar />
       <main className="homepage">
         {user?.avatar !== undefined && (
@@ -33,7 +33,7 @@ const HomePage = () => {
         <button onClick={() => navigate("/city")}>Career Professions</button>
       </main>
       <NavBar />
-    </>
+    </div>
   );
 };
 

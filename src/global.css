@@ -7,7 +7,6 @@
   --off-purple-unselected-button: #8163d6; /* 15% opacity */
   --light-card-background: #f2f4fe;
   --dark-purple-menu: #28004a;
-  --button-pink: #ba68c8;
   --gray-background: #eeeeee;
   --menu-background: #edf0fc;
 
@@ -25,8 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+.purple-gradient {
   background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot));
+  min-height: 100vh;
+  width: 100vw;
+}
+
+body {
+  /* background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot)); */
 
   /* stuff from default index.css - have not confirmed */
   margin: 0;
@@ -35,16 +40,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-/* .top-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white; 
-  z-index: 1000;
-  border-bottom: 1px solid #ccc;
-} */
 
 /* Bottom Navbar */
 
@@ -84,6 +79,10 @@ body {
   justify-content: space-around;
   margin: 0;
   padding: 10px 0;
+}
+
+.test-white {
+  /* just exists so we can see the text for the time beans */
   color: white;
 }
 
@@ -112,6 +111,22 @@ body {
   /* margin: auto; */
   /* align-items: center; */
   margin-bottom: 150px;
+}
+
+/* personality test */
+
+.personality {
+  background-color: var(--gray-background);
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.personality-inset {
+  background-color: var(--light-blue-background);
 }
 
 /* buttonsssssss */
