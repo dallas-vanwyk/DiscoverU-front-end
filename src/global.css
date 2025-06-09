@@ -9,11 +9,7 @@
   --dark-purple-menu: #28004a;
   --gray-background: #eeeeee;
   --menu-background: #edf0fc;
-
-  /* purple background gradient */
-  --pbg-top: #2c0a61;
-  --pbg-mid: #4f0067;
-  --pbg-bot: #600262;
+  --pbg-grad: linear-gradient(#2c0a61, #4f0067, #600262);
 
   /* stuff from default index.css - not 100% sure what all this is doing for us tbh */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -24,22 +20,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.purple-gradient {
-  background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot));
-  height: 100vh;
-  width: 100vw;
-}
-
-body {
-  /* background: linear-gradient(var(--pbg-top), var(--pbg-mid), var(--pbg-bot)); */
-
+/* body - applies to all pages */
+/* body { */
   /* stuff from default index.css - have not confirmed */
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* margin: 0; */
+  /* display: flex;
+  place-items: center; */
+  /* min-width: 320px; */
+  /* min-height: 100vh; */
+  /* background: var(--pbg-grad); */
+
+/* } */
 
 /* Bottom Navbar */
 
@@ -90,6 +81,7 @@ body {
 
 .floating-content {
   box-sizing: border-box;
+  width: 100%;
   margin: 10px;
   border-radius: 40px;
   padding: 20px;
@@ -117,19 +109,13 @@ body {
 /* personality test */
 
 .personality {
-  background-color: var(--gray-background);
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  width: 100vw;
-  min-height: 100vh;
 }
 
 .personality-inset {
   background-color: var(--light-blue-background);
-  height: 60vh; /* placeholder */
-  width: 80vw; /* placeholder */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -165,7 +151,7 @@ button:focus-visible {
 .button-pink {
   background-color: var(--light-purple-button);
   color: white;
-  width: 100%; /* placeholder; need to fix */
-  box-sizing: border-box;
-  margin: 10px;
+  width: 100%;
+  /* box-sizing: border-box; */
+  margin: 0;
 }

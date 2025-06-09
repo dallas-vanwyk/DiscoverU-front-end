@@ -1,20 +1,18 @@
 // src/components/PersonalityTest.jsx
+
 import { useNavigate } from "react-router";
-import { Link } from "react-router";
 import NavBar from "../NavBar/NavBar.jsx";
 import TopNavBar from "../TopNavBar/TopNavBar.jsx";
 
-const HomePage = () => {
+const PersonalityTest = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="personality">
+    <div>
+      <style>{"body{background-color: var(--gray-background)}"}</style>
+
       <TopNavBar />
-      {/* <nav className="top-navbar">
-        <Link onClick={() => navigate(-1)}>
-          <img src="images/icons/back-arrow.svg" alt="Explore" />
-        </Link>
-      </nav> */}
+
       <main className="personality-inset floating-content">
         {/* <p>Discover your inner traits</p> */}
         <img
@@ -31,9 +29,10 @@ const HomePage = () => {
           <button className="button-pink">Test It Out!</button>
         </a>
       </main>
+
       <NavBar />
     </div>
   );
 };
 
-export default HomePage;
+export default PersonalityTest;

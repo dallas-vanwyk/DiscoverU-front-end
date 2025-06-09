@@ -11,8 +11,11 @@ const HomePage = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <div className="purple-gradient">
+    <div>
+      <style>{"body{background: var(--pbg-grad)}"}</style>
+
       <TopNavBar />
+
       <main className="homepage">
         {user?.avatar !== undefined && (
           <img
@@ -32,6 +35,7 @@ const HomePage = () => {
         <button onClick={() => navigate("/")}>Network</button>
         <button onClick={() => navigate("/city")}>Career Professions</button>
       </main>
+
       <NavBar />
     </div>
   );
