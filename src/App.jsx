@@ -9,6 +9,7 @@ import Landing from "./components/Landing/Landing";
 import HomePage from "./components/HomePage/HomePage";
 import PersonalityTest from "./components/PersonalityTest/PersonalityTest.jsx";
 import Game from "./components/Game/Game.jsx";
+import Explore from "./components/Explore/Explore.jsx";
 import { UserContext } from "./contexts/UserContext";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/sign-in" element={<SignInForm />} />
         <Route path="/personality-test" element={<PersonalityTest />} />
         <Route path="/city" element={<Game />} />
+        <Route path="/explore" element={<Explore />} />
       </Routes>
     </>
   );
