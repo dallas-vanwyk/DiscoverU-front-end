@@ -13,7 +13,7 @@ const PersonalityTest = () => {
 
       <TopNavBar />
 
-      <main className="personality-inset floating-content">
+      <main className="mainpage">
         {/* <p>Discover your inner traits</p> */}
         <img
           src="images/main-app/personality-test-crop.png"
