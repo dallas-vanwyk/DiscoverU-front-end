@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { useNavigate } from "react-router";
 
 const Explore = () => {
+  const navigate = useNavigate();
   return (
     <>
       <TopNavBar />
@@ -85,7 +86,7 @@ const Explore = () => {
               Women's Health
             </li>
             <li>
-              <img src="images/explore-page/.png" alt="Nurse Director" />
+              <img src="images/explore-page/15.png" alt="Nurse Director" />
               Nurse Director
             </li>
             <li>
@@ -96,7 +97,7 @@ const Explore = () => {
               Family Nurse Practitioner
             </li>
             <li>
-              <img src="images/explore-page/15.png" alt="professor" />
+              <img src="images/explore-page/.png" alt="professor" />
               Professor
             </li>
             <li>
