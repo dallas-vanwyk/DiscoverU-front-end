@@ -123,7 +123,7 @@ const Game = () => {
           <img src="images/game/doctor.svg" alt="Icon" />
           <p>
             So you want to learn about being a nurse. Awesome! Let’s dig into
-            the role. Click the link below
+            the role. Click the link below 
           </p>
           <a
             href="https://youtu.be/1RwrSEMei8g?si=cvqJhbAe-B1kndgu"

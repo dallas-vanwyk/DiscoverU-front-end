@@ -48,10 +48,6 @@ body {
   border-radius: 40px;
 }
 
-.floating-image {
-  padding: 20px;
-}
-
 /* Buttons ===================================================== */
 button {
   font-size: 24px;
@@ -106,6 +102,7 @@ button:focus-visible {
   /* place-items: center; */
   background-color: var(--light-blue-background);
   justify-content: space-evenly;
+  padding: 20px;
   /* min-height: calc(100vh - var(--bottom-navbar-height) - var(--top-navbar-height)); */
 }
 
