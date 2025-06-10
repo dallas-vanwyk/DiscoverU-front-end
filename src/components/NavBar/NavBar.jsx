@@ -33,7 +33,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/explore">
               <img src="images/icons/explore.svg" alt="Explore" />
             </Link>
           </li>
