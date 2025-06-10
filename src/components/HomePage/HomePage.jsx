@@ -17,29 +17,34 @@ const HomePage = () => {
         <img
           src="images/main-app/home-page-crop.png"
           alt="people discussing at table"
+
+          // className="floating-content"
           className="floating-content homepage-image"
         />
 
-        <button
-          className="button-white"
-          onClick={() => navigate("/personality-test")}
-        >
-          Personality Test
-        </button>
+        <div className="floating-content">
+          <button
+            className="button-white"
+            onClick={() => navigate("/personality-test")}
+            >
+            Personality Test
+          </button>
 
-        <button
-          className="button-white"
-          onClick={() => navigate("/")}
-        >
-          Network
-        </button>
+          <button
+            className="button-white"
+            onClick={() => navigate("/")}
+            >
+            Network
+          </button>
 
-        <button
-          className="button-white"
-          onClick={() => navigate("/city")}
-        >
-          Career Professions
-        </button>
+          <button
+            className="button-white"
+            onClick={() => navigate("/city")}
+            >
+            Career Professions
+          </button>
+        </div>
+
       </main>
 
       <NavBar />

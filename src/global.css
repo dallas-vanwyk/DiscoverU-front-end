@@ -1,6 +1,6 @@
 /* src/global.css */
 
-/* global color variables ====================================== */
+/* global color variables etc ================================== */
 :root {
   --light-blue-background: #c7d3ff; /* used for search bar as well as some pages */ /* search bar 80% opacity */
   --light-purple-button: #ba68c8;
@@ -10,8 +10,8 @@
   --gray-background: #eeeeee;
   --menu-background: #edf0fc;
   --pbg-grad: linear-gradient(#2c0a61, #4f0067, #600262);
-  --top-navbar-height: 50px;
-  --bottom-navbar-height: 60px;
+  --top-navbar-height: 44px;
+  --bottom-navbar-height: 90px;
 
   /* stuff from default index.css - not 100% sure what to keep */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -22,6 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* ============================================================= */
 /* other universal stuff... ==================================== */
 
@@ -29,18 +34,21 @@
 .mainpage {
   display: flex;
   flex-direction: column;
-  padding-top: var(--top-navbar-height);
-  padding-bottom: var(--bottom-navbar-height);
+  
   min-height: 100vh;
   width: 100%;
+
+  padding-top: var(--top-navbar-height);
+  padding-bottom: var(--bottom-navbar-height);
 }
 
 /* main content blocks */
 .floating-content {
-  box-sizing: border-box;
-  width: 100%;
   margin: 10px;
   border-radius: 40px;
+}
+
+.floating-image {
   padding: 20px;
 }
 
@@ -50,9 +58,9 @@ button {
   font-weight: 800;
 
   box-sizing: border-box;
-  margin: 15px 0px; /* top-bottom, left-right */
-  /* width: 100%; */
-  padding: 10px; /* gets the height proper */
+  margin: 10px 0px; /* top-bottom, left-right */
+  width: 100%;
+  padding: 10px; /* gets the height inside the button proper */
 
   border-radius: 40px;
 
@@ -88,17 +96,7 @@ button:focus-visible {
 /* home page =================================================== */
 .homepage-image {
   background: #ffffff55;
-  margin: 20px;
-  /* width: 90%; */
-}
-
-.homepage {
-  width: 100vw;
-  /* justify-content: center; */
-  /* align-self: center; */
-  /* margin: auto; */
-  /* align-items: center; */
-  margin-bottom: 150px;
+  padding: 20px;
 }
 
 /* personality test ============================================ */
@@ -107,19 +105,20 @@ button:focus-visible {
   flex-direction: column;
   /* place-items: center; */
   background-color: var(--light-blue-background);
+  justify-content: space-evenly;
+  /* min-height: calc(100vh - var(--bottom-navbar-height) - var(--top-navbar-height)); */
 }
 
-.personality-inset {
-  display: flex;
-  justify-content: space-evenly;
+.personality > img, a {
+  margin: 40px 0px;
 }
 
 /* Bottom Navbar =============================================== */
 .bottom-navbar {
   background-color: var(--menu-background);
+  position: fixed;
   padding: 0;
   margin: 0;
-  position: fixed;
   bottom: 0;
   width: 100vw;
   z-index: 999;
@@ -137,6 +136,8 @@ button:focus-visible {
 .top-navbar {
   background-color: var(--dark-purple-menu);
   position: fixed;
+  padding: 0;
+  margin: 0;
   top: 0;
   left: 0;
   width: 100%;
