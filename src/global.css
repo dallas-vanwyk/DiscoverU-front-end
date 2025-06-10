@@ -1,8 +1,7 @@
 /* src/global.css */
 
-/* ============================================================= */
+/* global color variables ====================================== */
 :root {
-  /* global color variables */
   --light-blue-background: #c7d3ff; /* used for search bar as well as some pages */ /* search bar 80% opacity */
   --light-purple-button: #ba68c8;
   --off-purple-unselected-button: #8163d6; /* 15% opacity */
@@ -14,7 +13,7 @@
   --top-navbar-height: 50px;
   --bottom-navbar-height: 60px;
 
-  /* stuff from default index.css - not 100% sure what all this is doing for us tbh */
+  /* stuff from default index.css - not 100% sure what to keep */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-synthesis: none;
@@ -32,6 +31,8 @@
   flex-direction: column;
   padding-top: var(--top-navbar-height);
   padding-bottom: var(--bottom-navbar-height);
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* main content blocks */
@@ -45,21 +46,22 @@
 
 /* Buttons ===================================================== */
 button {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
-  margin: 10px 20px;
-  /* box-sizing: border-box;
-  width: 100%; */
-  border-radius: 40px;
-  /* background-color: #ffffff; */
 
-  padding: 0.6em 1.2em;
-  font-family: inherit;
+  box-sizing: border-box;
+  margin: 15px 0px; /* top-bottom, left-right */
+  /* width: 100%; */
+  padding: 10px; /* gets the height proper */
+
+  border-radius: 40px;
+
+  /* from original index.css */
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
-/* button stuff from original index.css */
+/* from original index.css */
 button:hover {
   border-color: #646cff;
 }
@@ -68,12 +70,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.test-link {
+  width: 80%;
+}
+
+/* button C O L O R S */
+.button-white {
+  background-color: white;
+  color: black;
+}
 .button-pink {
   background-color: var(--light-purple-button);
   color: white;
   width: 100%;
-  /* box-sizing: border-box; */
-  margin: 0;
 }
 
 /* home page =================================================== */
@@ -95,13 +104,13 @@ button:focus-visible {
 /* personality test ============================================ */
 .personality {
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  /* place-items: center; */
+  background-color: var(--light-blue-background);
 }
 
 .personality-inset {
-  background-color: var(--light-blue-background);
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
 }
 
