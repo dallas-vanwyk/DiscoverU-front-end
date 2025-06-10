@@ -1,10 +1,5 @@
 import { useContext } from "react";
 import { Link } from "react-router";
-import { RiHome2Line } from "react-icons/ri";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { LuGamepad2 } from "react-icons/lu";
-import { CgDetailsMore } from "react-icons/cg";
-
 import { UserContext } from "../../contexts/UserContext";
 
 const NavBar = () => {
@@ -22,13 +17,11 @@ const NavBar = () => {
         <ul>
           <li>
             <Link to="/">
-              {/* <RiHome2Line /> */}
               <img src="images/icons/Home.svg" alt="Home" />
             </Link>
           </li>
           <li>
             <Link to="/">
-              {/* <FaPeopleGroup /> */}
               <img src="images/icons/Network.svg" alt="Network" />
             </Link>
           </li>

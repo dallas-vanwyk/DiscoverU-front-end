@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Routes, Route } from "react-router";
-import "./App.css";
 import "./global.css";
 
 import SignUpForm from "./components/SignUpForm/SignUpForm";

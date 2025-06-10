@@ -15,12 +15,12 @@ const SignInForm = () => {
     password: "",
   });
 
-  const handleChange = (evt) => {   
+  const handleChange = (evt) => {
     setMessage("");
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
 
-const handleSubmit = async (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
 
     // const isEmail = formData.username.includes('@');
@@ -41,6 +41,8 @@ const handleSubmit = async (evt) => {
 
   return (
     <main>
+      <style>{"body{background: var(--pbg-grad)}"}</style>
+
       <h1>Log In</h1>
       <img src="images/main-app/login.svg" alt="Icon" />
       <p>{message}</p>

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router";
 import { FaEdit } from 'react-icons/fa';
-
 import { UserContext } from "../../contexts/UserContext";
 
 const TopNavBar = () => {
@@ -32,13 +31,17 @@ const TopNavBar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/">Messages</Link>
+          <Link to="/" className="test-white">
+            Messages
+          </Link>
         </li>
         <li>
-          <Link to="/">Progress Tracker</Link>
+          <Link to="/" className="test-white">
+            Progress Tracker
+          </Link>
         </li>
         <li>
-          <Link to="/" onClick={handleSignOut}>
+          <Link to="/" onClick={handleSignOut} className="test-white">
             Sign Out
           </Link>
         </li>
