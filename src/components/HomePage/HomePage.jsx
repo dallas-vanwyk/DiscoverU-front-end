@@ -30,7 +30,7 @@ const HomePage = () => {
 
           <button
             className="button-white"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/network")}
             >
             Network
           </button>
