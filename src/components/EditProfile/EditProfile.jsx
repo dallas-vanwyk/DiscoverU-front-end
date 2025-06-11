@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 import SelectAvatar from "../SelectAvatar/SelectAvatar.jsx";
 import { useNavigate } from "react-router";
 import { update } from "../../services/userService.js";
+import { FaEdit } from "react-icons/fa";
 
 const EditProfile = () => {
   const { user, setUser } = useContext(UserContext);
@@ -59,7 +60,7 @@ const EditProfile = () => {
                 className="avatar-image"
               />
             </div>
-
+            <FaEdit />
           </div>
 
           <button

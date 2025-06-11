@@ -1,5 +1,7 @@
 /* src/global.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap');
+
 /* =============================== global color variables etc ================================== */
 :root {
   --light-blue-background: #c7d3ff; /* used for search bar as well as some pages */ /* search bar 80% opacity */
@@ -53,11 +55,17 @@ body {
   border-radius: 40px;
 }
 
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+
 /* =============================== headings ==================================================== */
 .heading-no-bills {
   font-size: 64;
   color: white;
   text-align: center;
+  font-family: "Stick No Bills", sans-serif;
 }
 
 /* =============================== White form ================================================== */
@@ -194,6 +202,11 @@ button:focus-visible {
 .personality > img,
 a {
   margin: 40px 0px;
+}
+
+/* =============================== landing ===================================================== */
+.landing {
+  align-self: center;
 }
 
 /* =============================== message ===================================================== */
