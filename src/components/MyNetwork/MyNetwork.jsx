@@ -1,7 +1,8 @@
 // src/components/MyNetwork/MyNetwork.jsx
 
 import { useEffect, useState } from "react";
-import { index } from "../../services/userService.js"
+import { index } from "../../services/userService.js";
+import NavBar from "../NavBar/NavBar.jsx";
 
 const MyNetwork = () => {
     const [users, setUsers] = useState([]);
@@ -81,6 +82,7 @@ const handleFollow = (userId) => {
 
 
 return (
+    <>
     <div>
         <h1>Network</h1>
          <ul style={listStyle}>
@@ -103,7 +105,8 @@ return (
       </ul>
       {message && <p style={{ color: "red" }}>{message}</p>}
     </div>
-
+<NavBar />
+    </>
 )
 }
 
