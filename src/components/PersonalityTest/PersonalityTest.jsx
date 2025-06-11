@@ -14,7 +14,7 @@ const PersonalityTest = () => {
       <TopNavBar />
 
       <div>
-        
+        {/* I forget why this was here */}
       </div>
 
       <main className="mainpage">

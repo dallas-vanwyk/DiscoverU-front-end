@@ -26,11 +26,8 @@ const App = () => {
         <Route path="/sign-in" element={<SignInForm />} />
         <Route path="/personality-test" element={<PersonalityTest />} />
         <Route path="/city" element={<Game />} />
-
         <Route path="/explore" element={<Explore />} />
-
         <Route path="/users/:userId/edit" element={<EditProfile />} />
-
       </Routes>
     </>
   );

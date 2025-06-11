@@ -17,8 +17,6 @@ const HomePage = () => {
         <img
           src="images/main-app/home-page-crop.png"
           alt="people discussing at table"
-
-          // className="floating-content"
           className="floating-content homepage-image"
         />
 

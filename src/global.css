@@ -1,6 +1,6 @@
 /* src/global.css */
 
-/* global color variables etc ================================== */
+/* =============================== global color variables etc ================================== */
 :root {
   --light-blue-background: #c7d3ff; /* used for search bar as well as some pages */ /* search bar 80% opacity */
   --light-purple-button: #ba68c8;
@@ -27,14 +27,18 @@ body {
   padding: 0;
 }
 
-/* ============================================================= */
-/* other universal stuff... ==================================== */
+/* element:focus {
+  outline: none;
+} */
+
+/* =============================== ============================================================= */
+/* =============================== other universal stuff... ==================================== */
 
 /* common styling for the MAIN component among most pages */
 .mainpage {
   display: flex;
   flex-direction: column;
-  
+
   min-height: 100vh;
   width: 100%;
 
@@ -48,21 +52,64 @@ body {
   border-radius: 40px;
 }
 
-/* Buttons ===================================================== */
+/* =============================== headings ==================================================== */
+.heading-no-bills {
+  font-size: 64;
+  color: white;
+  text-align: center;
+}
+
+/* =============================== White form ================================================== */
+/* sign up, sign in, edit account */
+.white-form {
+  background-color: white;
+  padding: 20px 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.white-form > * {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 16;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16;
+}
+
+input:focus,
+input:focus-visible {
+  outline: 1px solid #3c9afb;
+}
+
+/* =============================== Buttons ===================================================== */
 button {
   font-size: 24px;
   font-weight: 800;
-
   box-sizing: border-box;
   margin: 10px 0px; /* top-bottom, left-right */
   width: 100%;
   padding: 10px; /* gets the height inside the button proper */
-
   border-radius: 40px;
 
-  /* from original index.css */
   cursor: pointer;
   transition: border-color 0.25s;
+  /* box-shadow: ; */
 }
 
 /* from original index.css */
@@ -72,10 +119,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-.test-link {
-  width: 80%;
 }
 
 /* button C O L O R S */
@@ -89,28 +132,27 @@ button:focus-visible {
   width: 100%;
 }
 
-/* home page =================================================== */
+/* =============================== home page =================================================== */
 .homepage-image {
   background: #ffffff55;
   padding: 20px;
 }
 
-/* personality test ============================================ */
+/* =============================== personality test ============================================ */
 .personality {
   display: flex;
   flex-direction: column;
-  /* place-items: center; */
   background-color: var(--light-blue-background);
   justify-content: space-evenly;
   padding: 20px;
-  /* min-height: calc(100vh - var(--bottom-navbar-height) - var(--top-navbar-height)); */
 }
 
-.personality > img, a {
+.personality > img,
+a {
   margin: 40px 0px;
 }
 
-/* Bottom Navbar =============================================== */
+/* =============================== Bottom Navbar =============================================== */
 .bottom-navbar {
   background-color: var(--menu-background);
   position: fixed;
@@ -129,7 +171,7 @@ button:focus-visible {
   padding: 10px 0 0 0;
 }
 
-/* Top Navbar ================================================== */
+/* =============================== Top Navbar ================================================== */
 .top-navbar {
   background-color: var(--dark-purple-menu);
   position: fixed;
