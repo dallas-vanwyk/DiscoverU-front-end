@@ -6,16 +6,31 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <main>
-      <img src="images/main-app/buildings.svg" alt="Icon" />
-      <h2>Real Experience.</h2>
-      <h2>New Careers.</h2>
-      <h2>Pure Fun.</h2>
+    <div className="flex-box">
+      <style>{"body{background: var(--pbg-grad)}"}</style>
+      
+      <main className="mainpage">
+        <div className="floating-content landing">
+          <img cl src="images/main-app/buildings.svg" alt="buildings icon" />
 
-      <button onClick={() => navigate("/sign-in")}>Log in</button>
-      <br />
-      <button onClick={() => navigate("/sign-up")}>Create Account</button>
-    </main>
+          <h2 className="heading-no-bills">
+            Real Experience.
+            <br />
+            New Careers.
+            <br />
+            Pure Fun.
+          </h2>
+
+          <button className="button-white" onClick={() => navigate("/sign-in")}>
+            Log in
+          </button>
+
+          <button className="button-white" onClick={() => navigate("/sign-up")}>
+            Create Account
+          </button>
+        </div>
+      </main>
+    </div>
   );
 };
 

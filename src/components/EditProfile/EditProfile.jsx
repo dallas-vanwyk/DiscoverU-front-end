@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 import SelectAvatar from "../SelectAvatar/SelectAvatar.jsx";
 import { useNavigate } from "react-router";
 import { update } from "../../services/userService.js";
+import { FaEdit } from "react-icons/fa";
 
 const EditProfile = () => {
   const { user, setUser } = useContext(UserContext);
@@ -38,23 +39,33 @@ const EditProfile = () => {
   return (
     <main className="mainpage">
       <style>{"body{background: var(--pbg-grad)}"}</style>
-      <h1 className="heading-no-bills">Edit Profile</h1>
-      <p>{message}</p>
+
+      <h1 className="heading-no-bills">Account</h1>
+
+      <p className="message">{message}</p>
 
       {!formData.avatar ? (
         <>
-          <h3>Select an Avatar</h3>
+          <h3 className="heading-no-bills">Select Avatar</h3>
           <SelectAvatar onSelect={handleAvatarSelect} />
         </>
       ) : (
         <form onSubmit={handleSubmit}>
-          <img
-            src={`/images/avatars/${formData.avatar}`}
-            alt="Selected Avatar"
-            style={{ width: "80px", borderRadius: "50%", marginBottom: "1rem" }}
-          />
+          <div className="avatar-box">
+            <div className="avatar-parent">
+              <div className="avatar-circle"></div>
+              <img
+                src={`/images/avatars/${formData.avatar}`}
+                alt="Selected Avatar"
+                className="avatar-image"
+              />
+            </div>
+            <FaEdit />
+          </div>
+
           <button
             type="button"
+            className="button-avatar"
             onClick={() => setFormData({ ...formData, avatar: "" })}
           >
             Change Avatar
@@ -111,7 +122,7 @@ const EditProfile = () => {
 
             <div>
               <button type="submit" className="button-pink">
-                Save Changes
+                SAVE
               </button>
             </div>
           </div>

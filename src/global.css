@@ -1,5 +1,7 @@
 /* src/global.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap');
+
 /* =============================== global color variables etc ================================== */
 :root {
   --light-blue-background: #c7d3ff; /* used for search bar as well as some pages */ /* search bar 80% opacity */
@@ -12,6 +14,7 @@
   --pbg-grad: linear-gradient(#2c0a61, #4f0067, #600262);
   --top-navbar-height: 44px;
   --bottom-navbar-height: 90px;
+  --avatar-size: 300px;
 
   /* stuff from default index.css - not 100% sure what to keep */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -52,11 +55,17 @@ body {
   border-radius: 40px;
 }
 
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+
 /* =============================== headings ==================================================== */
 .heading-no-bills {
   font-size: 64;
   color: white;
   text-align: center;
+  font-family: "Stick No Bills", sans-serif;
 }
 
 /* =============================== White form ================================================== */
@@ -64,6 +73,7 @@ body {
 .white-form {
   background-color: white;
   padding: 20px 10px;
+  box-shadow: #ffffff90 0px 6px 20px;
 }
 
 form {
@@ -99,17 +109,8 @@ input:focus-visible {
 
 /* =============================== Buttons ===================================================== */
 button {
-  font-size: 24px;
-  font-weight: 800;
-  box-sizing: border-box;
-  margin: 10px 0px; /* top-bottom, left-right */
-  width: 100%;
-  padding: 10px; /* gets the height inside the button proper */
-  border-radius: 40px;
-
   cursor: pointer;
   transition: border-color 0.25s;
-  /* box-shadow: ; */
 }
 
 /* from original index.css */
@@ -121,6 +122,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.button-avatar {
+  /* fill: none; */
+
+  font-size: 30;
+}
+
+.button-white,
+.button-pink {
+  font-size: 24px;
+  font-weight: 800;
+  box-sizing: border-box;
+  margin: 10px 0px; /* top-bottom, left-right */
+  width: 100%;
+  padding: 10px; /* gets the height inside the button proper */
+  border-radius: 40px;
+  border: none;
+  box-shadow: #999999 0px 4px 8px;
+}
+
 /* button C O L O R S */
 .button-white {
   background-color: white;
@@ -130,6 +150,38 @@ button:focus-visible {
   background-color: var(--light-purple-button);
   color: white;
   width: 100%;
+}
+
+/* =============================== avatar ====================================================== */
+.avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-parent,
+.avatar-parent > * {
+  position: relative;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+.avatar-circle {
+  position: relative;
+  background-color: var(--light-blue-background);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.avatar-image {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  top: -300px;
+  left: 0;
+  /* border-radius: 50%; */ /* TBD - hi-res doesn't have it */
 }
 
 /* =============================== home page =================================================== */
@@ -150,6 +202,16 @@ button:focus-visible {
 .personality > img,
 a {
   margin: 40px 0px;
+}
+
+/* =============================== landing ===================================================== */
+.landing {
+  align-self: center;
+}
+
+/* =============================== message ===================================================== */
+.message {
+  color: white;
 }
 
 /* =============================== Bottom Navbar =============================================== */
