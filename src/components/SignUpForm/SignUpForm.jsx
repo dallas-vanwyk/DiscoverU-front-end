@@ -60,7 +60,7 @@ const SignUpForm = () => {
         </>
       ) : (
         <form onSubmit={handleSubmit}>
-          <h1 className="heading-no-bills">Finish Signing Up</h1>
+          <h1 className="heading-no-bills">Create Account</h1>
 
           <img
             src={`/images/avatars/${formData.avatar}`}
@@ -68,11 +68,12 @@ const SignUpForm = () => {
             style={{ width: "80px", borderRadius: "50%", marginBottom: "1rem" }}
           />
 
+
           <button
             type="button"
             onClick={() => setFormData({ ...formData, avatar: "" })}
           >
-            Change Avatar <FaEdit />
+            Select Avatar <FaEdit />
           </button>
 
           <div className="white-form floating-content">

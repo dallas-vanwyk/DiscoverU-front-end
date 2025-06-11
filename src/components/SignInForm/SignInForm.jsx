@@ -45,7 +45,7 @@ const SignInForm = () => {
 
       <h1 className="heading-no-bills">Log In</h1>
       <img
-        src="images/main-app/login.svg"
+        src="images/main-app/login.png"
         alt="people discussing at table"
         className="floating-content homepage-image"
       />
@@ -54,7 +54,7 @@ const SignInForm = () => {
         <p>{message}</p>
         <form autoComplete="off" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="username">Email or Username:</label>
+            <label htmlFor="username">Email or Username</label>
             <input
               type="text"
               autoComplete="off"
@@ -67,7 +67,7 @@ const SignInForm = () => {
           </div>
 
           <div>
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               autoComplete="off"
@@ -79,9 +79,9 @@ const SignInForm = () => {
             />
           </div>
           <div>
-            <button className="button-pink">Sign In</button>
+            <button className="button-pink">NEXT</button>
             <button className="button-pink" onClick={() => navigate("/")}>
-              Cancel
+              CANCEL
             </button>
           </div>
         </form>
