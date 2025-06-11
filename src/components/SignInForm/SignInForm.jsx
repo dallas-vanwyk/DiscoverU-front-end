@@ -40,43 +40,52 @@ const SignInForm = () => {
   };
 
   return (
-    <main>
+    <main className="mainpage">
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
-      <h1>Log In</h1>
-      <img src="images/main-app/login.svg" alt="Icon" />
-      <p>{message}</p>
-      <form autoComplete="off" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Email or Username:</label>
-          <input
-            type="text"
-            autoComplete="off"
-            id="username"
-            value={formData.username}
-            name="username"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <br />
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            autoComplete="off"
-            id="password"
-            value={formData.password}
-            name="password"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <button>Sign In</button>
-          <button onClick={() => navigate("/")}>Cancel</button>
-        </div>
-      </form>
+      <h1 className="heading-no-bills">Log In</h1>
+      <img
+        src="images/main-app/login.svg"
+        alt="people discussing at table"
+        className="floating-content homepage-image"
+      />
+
+      <div className="white-form floating-content">
+        <p>{message}</p>
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="username">Email or Username:</label>
+            <input
+              type="text"
+              autoComplete="off"
+              id="username"
+              value={formData.username}
+              name="username"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              autoComplete="off"
+              id="password"
+              value={formData.password}
+              name="password"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <button className="button-pink">Sign In</button>
+            <button className="button-pink" onClick={() => navigate("/")}>
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
   );
 };
