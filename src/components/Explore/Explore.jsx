@@ -1,10 +1,9 @@
-import TopNavBar from "../TopNavBar/TopNavBar.jsx";
-import NavBar from "../NavBar/NavBar.jsx";
 import { Link } from "react-router";
 import { useNavigate } from "react-router";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import TopNavBar from "../TopNavBar/TopNavBar.jsx";
+import NavBar from "../NavBar/NavBar.jsx";
 import NavTabs from "../NavTabs/NavTabs";
 
 const responsive = {
@@ -27,8 +26,32 @@ const responsive = {
   },
 };
 
+const youtubes = [
+  {
+    id: "eCZJ-e2N0Vw",
+    title: "How Much I Make as a Nurse",
+    views: "125k",
+  },
+  {
+    id: "r-1UAacCsCc",
+    title: "The Reality of CRNA School",
+    views: "125k",
+  },
+  {
+    id: "yFKr3oudtBM",
+    title: "Nurse Practitioner VS Nurse Anesthetist",
+    views: "125k",
+  },
+  {
+    id: "FcEZoNkGPOM",
+    title: "Steps to becoming a CRNA",
+    views: "125k",
+  },
+];
+
 const Explore = () => {
   const navigate = useNavigate();
+
   return (
     <>
       <style>
@@ -47,65 +70,19 @@ const Explore = () => {
             <h2 className="heading-no-bills">#Nursing</h2>
 
             <Carousel responsive={responsive}>
-              <div className="youtube-div">
-                <Link to="/shorts/eCZJ-e2N0Vw">
-                  <img
-                    src="https://img.youtube.com/vi/eCZJ-e2N0Vw/oar1.jpg"
-                    alt="How Much I Make as a Nurse"
-                    className="youtube-thumbnail"
-                  />
-                </Link>
-
-                <p className="youtube-title">
-                  How Much I Make as a Nurse #shorts
-                </p>
-
-                <p className="youtube-views">125k Views</p>
-              </div>
-
-              <div className="youtube-div">
-                <Link to="/shorts/r-1UAacCsCc">
-                  <img
-                    src="https://img.youtube.com/vi/r-1UAacCsCc/oar1.jpg"
-                    alt="The Reality of CRNA School"
-                    className="youtube-thumbnail"
-                  />
-                </Link>
-
-                <p className="youtube-title">The Reality of CRNA School</p>
-
-                <p className="youtube-views">125k Views </p>
-              </div>
-
-              <div className="youtube-div">
-                <Link to="/shorts/yFKr3oudtBM">
-                  <img
-                    src="https://img.youtube.com/vi/yFKr3oudtBM/oar1.jpg"
-                    alt="Nurse Practitioner VS Nurse Anesthetist"
-                    className="youtube-thumbnail"
-                  />
-                </Link>
-
-                <p className="youtube-title">
-                  Nurse Practitioner VS Nurse Anesthetist
-                </p>
-
-                <p className="youtube-views">125k Views</p>
-              </div>
-
-              <div className="youtube-div">
-                <Link to="/shorts/FcEZoNkGPOM">
-                  <img
-                    src="https://img.youtube.com/vi/FcEZoNkGPOM/oar1.jpg"
-                    alt="Video Thumbnail"
-                    className="youtube-thumbnail"
-                  />
-                </Link>
-
-                <p className="youtube-title">Steps to becoming a CRNA!</p>
-
-                <p className="youtube-views">125k Views</p>
-              </div>
+              {youtubes.map((youtube) => (
+                <div className="youtube-div">
+                  <Link to={`/shorts/${youtube.id}`}>
+                    <img
+                      src={`https://img.youtube.com/vi/${youtube.id}/oar1.jpg`}
+                      alt={youtube.title}
+                      className="youtube-thumbnail"
+                    />
+                  </Link>
+                  <p className="youtube-title">{youtube.title}</p>
+                  <p className="youtube-views">{youtube.views} Views</p>
+                </div>
+              ))}
             </Carousel>
           </div>
 
