@@ -12,7 +12,7 @@ const Explore = () => {
         <div>
           <ul>
             <li>
-              <Link to="/">Posts</Link>
+              <Link to="/community">Posts</Link>
             </li>
             <li>
               <Link to="/">My Network</Link>
