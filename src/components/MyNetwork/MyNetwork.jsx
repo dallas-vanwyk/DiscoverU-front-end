@@ -5,6 +5,7 @@ import { index } from "../../services/userService.js";
 import NavBar from "../NavBar/NavBar.jsx";
 import { Link } from "react-router";
 import TopNavBar from "../TopNavBar/TopNavBar.jsx";
+import NavTabs from "../NavTabs/NavTabs.jsx";
 
 const MyNetwork = () => {
   const [users, setUsers] = useState([]);
@@ -84,42 +85,41 @@ const MyNetwork = () => {
 
   return (
     <>
-      {/* <TopNavBar /> */}
-      <div>
-        <ul>
-          <li>
-            <Link to="/community">Posts</Link>
-          </li>
-          <li>
-            <Link to="/network">My Network</Link>
-          </li>
-          <li>
-            <Link to="/explore">Explore</Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h1>Network</h1>
-        <ul style={listStyle}>
-          {users.map((user) => (
-            <li key={user._id} style={listItemStyle}>
-              <img
-                src={`/images/avatars/${user.avatar}`}
-                alt={`${user.name}'s avatar`}
-                style={imgStyle}
-              />
-              <span style={nameStyle}>{user.name}</span>
-              <button
-                style={following[user._id] ? buttonUnfollowStyle : buttonStyle}
-                onClick={() => handleFollow(user._id)}
-              >
-                {following[user._id] ? "Unfollow" : "Follow"}
-              </button>
-            </li>
-          ))}
-        </ul>
-        {message && <p style={{ color: "red" }}>{message}</p>}
-      </div>
+      <TopNavBar />
+
+      <main className="mainpage">
+        <NavTabs />
+
+        <div>
+          <h1>Network</h1>
+
+          <ul style={listStyle}>
+            {users.map((user) => (
+              <li key={user._id} style={listItemStyle}>
+                <img
+                  src={`/images/avatars/${user.avatar}`}
+                  alt={`${user.name}'s avatar`}
+                  style={imgStyle}
+                />
+
+                <span style={nameStyle}>{user.name}</span>
+
+                <button
+                  style={
+                    following[user._id] ? buttonUnfollowStyle : buttonStyle
+                  }
+                  onClick={() => handleFollow(user._id)}
+                >
+                  {following[user._id] ? "Unfollow" : "Follow"}
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          {message && <p style={{ color: "red" }}>{message}</p>}
+        </div>
+      </main>
+
       <NavBar />
     </>
   );

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router";
-import { FaEdit } from 'react-icons/fa';
+import { FaEdit } from "react-icons/fa";
 import { UserContext } from "../../contexts/UserContext";
 
 const TopNavBar = () => {
@@ -16,15 +16,15 @@ const TopNavBar = () => {
     <nav className="top-navbar">
       <ul>
         <li>
-          <Link to={`/users/${user._id}/edit`}><FaEdit/>
+          <Link to={`/users/${user._id}/edit`}>
+            <FaEdit />
             {user?.avatar !== undefined && (
               <img
                 src={`/images/avatars/${user.avatar}`}
                 alt="User Avatar"
                 style={{
-                  width: "80px",
+                  width: "40px",
                   borderRadius: "50%",
-                  marginBottom: "1rem",
                 }}
               />
             )}

@@ -1,6 +1,6 @@
 /* src/global.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap");
 
 /* =============================== global color variables etc ================================== */
 :root {
@@ -12,7 +12,7 @@
   --gray-background: #eeeeee;
   --menu-background: #edf0fc;
   --pbg-grad: linear-gradient(#2c0a61, #4f0067, #600262);
-  --top-navbar-height: 44px;
+  --top-navbar-height: 85px;
   --bottom-navbar-height: 90px;
   --avatar-size: 300px;
 
@@ -64,8 +64,69 @@ body {
 .heading-no-bills {
   font-size: 64;
   color: white;
+  /* text-align: left; */
   text-align: center;
   font-family: "Stick No Bills", sans-serif;
+}
+
+/* =============================== explore ===================================================== */
+.explore-list {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.youtube-div {
+  background-color: #8163d620;
+  height: 430px;
+  width: 190px;
+}
+
+.carousel-div {
+  background-color: #8163d620;
+  height: 300px;
+  width: 190px;
+}
+
+.youtube-thumbnail {
+  width: 190px;
+  border-radius: 8px;
+}
+
+.youtube-title {
+  font-size: 14;
+  font-weight: bold;
+  margin: 0;
+}
+
+.youtube-views {
+  font-size: 12;
+  margin: 5px 0;
+}
+
+.learn-more {
+  width: 200px;
+}
+
+
+/* =============================== NavTab ====================================================== */
+
+.navtab {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+}
+
+.button-navtab {
+  color: white;
+  background-color: var(--light-purple-button);
+  font-size: 16;
+  border-radius: 100px;
+  font-weight: bold;
+  padding: 0.3em 1.3em;
 }
 
 /* =============================== White form ================================================== */
@@ -128,6 +189,17 @@ button:focus-visible {
   font-size: 30;
 }
 
+.button-dixie {
+  color: white;
+  background-color: var(--dark-purple-menu);
+  padding: 1em;
+  font-size: 15;
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+/* button C O L O R S */
 .button-white,
 .button-pink {
   font-size: 24px;
@@ -141,7 +213,6 @@ button:focus-visible {
   box-shadow: #999999 0px 4px 8px;
 }
 
-/* button C O L O R S */
 .button-white {
   background-color: white;
   color: black;

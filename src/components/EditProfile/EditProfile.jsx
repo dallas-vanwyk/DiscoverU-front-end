@@ -124,10 +124,14 @@ const EditProfile = () => {
               <button type="submit" className="button-pink">
                 SAVE
               </button>
+              <button className="button-pink" onClick={() => navigate("/")}>
+                Cancel
+              </button>
             </div>
           </div>
         </form>
       )}
+      
     </main>
   );
 };

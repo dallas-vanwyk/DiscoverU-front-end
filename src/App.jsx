@@ -16,12 +16,10 @@ import * as postService from "./services/postService.js";
 
 import MyNetwork from "./components/MyNetwork/MyNetwork.jsx"
 
-
 import Explore from "./components/Explore/Explore.jsx";
-
 import EditProfile from "./components/EditProfile/EditProfile.jsx";
-
-import { UserContext } from "./contexts/UserContext";
+import YouTubePage from "./components/YouTubePage/YouTubePage.jsx";
+import { UserContext } from "./contexts/UserContext.jsx";
 
 const App = () => {
   const navigate = useNavigate();
@@ -66,7 +64,7 @@ const App = () => {
         <Route path="/city" element={<Game />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/users/:userId/edit" element={<EditProfile />} />
-
+        <Route path="/shorts/:youtubeId" element={<YouTubePage />} />
         <Route path="/community" element={<CommunityList posts={posts} />} />
         <Route
           path="/posts/:postId"
@@ -80,9 +78,7 @@ const App = () => {
           path="/posts/:postId/edit"
           element={<CommunityPostForm handleUpdatePost={handleUpdatePost} />}
         />
-
         <Route path="/network" element={<MyNetwork/>} />
-
       </Routes>
     </>
   );

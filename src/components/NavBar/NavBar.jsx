@@ -17,33 +17,24 @@ const NavBar = () => {
         <ul>
           <li>
             <Link to="/">
-              <img src="images/icons/Home.svg" alt="Home" />
+              <img src="/images/icons/Home.svg" alt="Home" />
             </Link>
           </li>
           <li>
-
             <Link to="/community">
-
-           
-
-              <img src="images/icons/Network.svg" alt="Network" />
+              <img src="/images/icons/Network.svg" alt="Network" />
             </Link>
           </li>
           <li>
             <Link to="/explore">
-              <img src="images/icons/explore.svg" alt="Explore" />
+              <img src="/images/icons/explore.svg" alt="Explore" />
             </Link>
           </li>
           <li>
             <Link to="/city">
-              <img src="images/icons/Game.svg" alt="Game" />
+              <img src="/images/icons/Game.svg" alt="Game" />
             </Link>
           </li>
-          {/* <li>
-            <Link to="/" onClick={handleSignOut}>
-              Sign Out
-            </Link>
-          </li> */}
         </ul>
       ) : (
         <ul>
