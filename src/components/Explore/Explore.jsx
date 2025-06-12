@@ -112,17 +112,17 @@ const Explore = () => {
               </div>
 
               <div className="carousel-div">
-                <img src="images/explore-page/.png" alt="professor" />
+                <img src="images/explore-page/5.png" alt="professor" />
                 Professor
               </div>
 
               <div className="carousel-div">
-                <img src="images/explore-page/12.png" alt="professor" />
+                <img src="images/explore-page/12.png" alt="Geriatric" />
                 Geriatric
               </div>
 
               <div className="carousel-div">
-                <img src="images/explore-page/14.png" alt="professor" />
+                <img src="images/explore-page/14.png" alt="Emergency Room" />
                 Emergency Room
               </div>
             </Carousel>

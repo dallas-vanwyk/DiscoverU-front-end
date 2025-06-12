@@ -36,6 +36,7 @@ const EditProfile = () => {
       setMessage(error.message);
     }
   };
+
   return (
     <main className="mainpage">
       <style>{"body{background: var(--pbg-grad)}"}</style>
