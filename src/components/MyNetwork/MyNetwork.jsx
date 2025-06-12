@@ -3,34 +3,37 @@
 import { useEffect, useState } from "react";
 import { index } from "../../services/userService.js";
 import NavBar from "../NavBar/NavBar.jsx";
+import { Link } from "react-router";
+import TopNavBar from "../TopNavBar/TopNavBar.jsx";
 
 const MyNetwork = () => {
-    const [users, setUsers] = useState([]);
-    const [message, setMessage] = useState();
-    const [following, setFollowing] = useState({});
-// custom effect for fetching all users for this page specifically
-    useEffect(() => {
-        const getUsers = async () => {
-            try {
-                const data = await index();
-                console.log('users:', data[0]);
-                setUsers(data);
-            } catch (error) {
-                setMessage(error.message)
-            }
-    }
+  const [users, setUsers] = useState([]);
+  const [message, setMessage] = useState();
+  const [following, setFollowing] = useState({});
+  // custom effect for fetching all users for this page specifically
+  useEffect(() => {
+    const getUsers = async () => {
+      try {
+        const data = await index();
+        console.log("users:", data[0]);
+        setUsers(data);
+      } catch (error) {
+        setMessage(error.message);
+      }
+    };
     getUsers();
-}, []);
+  }, []);
 
-const handleFollow = (userId) => {
+  const handleFollow = (userId) => {
     setFollowing((prev) => ({
-        ...prev, [userId]: !prev[userId], // this should toggle the follow and unfollow button locally for now. Will return to at a later date and make it not local so user can always see who is followed and unfollowed
+      ...prev,
+      [userId]: !prev[userId], // this should toggle the follow and unfollow button locally for now. Will return to at a later date and make it not local so user can always see who is followed and unfollowed
     }));
-}
+  };
 
-// Some simple styling for testing purposes, Can be used in a separate CSS file later if wanted I just used Chatgpt to generate some basic styling so I can view the page easier. When I first got it functional, the avatars were giant and the text was very small. 
+  // Some simple styling for testing purposes, Can be used in a separate CSS file later if wanted I just used Chatgpt to generate some basic styling so I can view the page easier. When I first got it functional, the avatars were giant and the text was very small.
 
- const listStyle = {
+  const listStyle = {
     listStyle: "none",
     padding: 0,
     margin: 0,
@@ -62,7 +65,7 @@ const handleFollow = (userId) => {
   };
 
   const buttonStyle = {
-    marginLeft: "auto",  // push button to right side
+    marginLeft: "auto", // push button to right side
     padding: "6px 12px",
     fontSize: "14px",
     borderRadius: "4px",
@@ -79,36 +82,47 @@ const handleFollow = (userId) => {
     color: "#333",
   };
 
-
-
-return (
+  return (
     <>
-    <div>
-        <h1>Network</h1>
-         <ul style={listStyle}>
-        {users.map((user) => (
-          <li key={user._id} style={listItemStyle}>
-            <img
-              src={`/images/avatars/${user.avatar}`}
-              alt={`${user.name}'s avatar`}
-              style={imgStyle}
-            />
-            <span style={nameStyle}>{user.name}</span>
-            <button
-              style={following[user._id] ? buttonUnfollowStyle : buttonStyle}
-              onClick={() => handleFollow(user._id)}
-            >
-              {following[user._id] ? "Unfollow" : "Follow"}
-            </button>
+      {/* <TopNavBar /> */}
+      <div>
+        <ul>
+          <li>
+            <Link to="/community">Posts</Link>
           </li>
-        ))}
-      </ul>
-      {message && <p style={{ color: "red" }}>{message}</p>}
-    </div>
-<NavBar />
+          <li>
+            <Link to="/network">My Network</Link>
+          </li>
+          <li>
+            <Link to="/explore">Explore</Link>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1>Network</h1>
+        <ul style={listStyle}>
+          {users.map((user) => (
+            <li key={user._id} style={listItemStyle}>
+              <img
+                src={`/images/avatars/${user.avatar}`}
+                alt={`${user.name}'s avatar`}
+                style={imgStyle}
+              />
+              <span style={nameStyle}>{user.name}</span>
+              <button
+                style={following[user._id] ? buttonUnfollowStyle : buttonStyle}
+                onClick={() => handleFollow(user._id)}
+              >
+                {following[user._id] ? "Unfollow" : "Follow"}
+              </button>
+            </li>
+          ))}
+        </ul>
+        {message && <p style={{ color: "red" }}>{message}</p>}
+      </div>
+      <NavBar />
     </>
-)
-}
-
+  );
+};
 
 export default MyNetwork;

@@ -7,7 +7,7 @@ const Explore = () => {
   const navigate = useNavigate();
   return (
     <>
-      <TopNavBar />
+      {/* <TopNavBar /> */}
       <main>
         <div>
           <ul>
