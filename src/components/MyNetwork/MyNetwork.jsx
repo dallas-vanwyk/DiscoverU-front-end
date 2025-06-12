@@ -16,7 +16,7 @@ const MyNetwork = () => {
     const getUsers = async () => {
       try {
         const data = await index();
-        console.log("users:", data[0]);
+        // console.log("users:", data[0]);
         setUsers(data);
       } catch (error) {
         setMessage(error.message);
