@@ -5,7 +5,6 @@ import { useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { UserContext } from "../../contexts/UserContext";
 
-
 const avatarFiles = [
   "avatar1.svg",
   "avatar2.svg",
@@ -22,10 +21,7 @@ const avatarFiles = [
 ];
 
 const SelectAvatar = ({ onSelect }) => {
-
   const { user, setUser } = useContext(UserContext);
-
-  
 
   const [avatar, setAvatar] = useState(null);
 
@@ -37,6 +33,9 @@ const SelectAvatar = ({ onSelect }) => {
   return (
     <div>
       {/* if initial page load or avatar has been selected */}
+
+      {console.log(user.avatar ? "true" : "false")}
+
       <img
         // src={`/images/avatars/${formData.avatar}`}
         alt="Selected Avatar"
