@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FaEdit } from "react-icons/fa";
 
+
 const avatarFiles = [
   "avatar1.svg",
   "avatar2.svg",

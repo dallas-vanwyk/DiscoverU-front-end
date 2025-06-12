@@ -57,8 +57,8 @@ const SignUpForm = () => {
       <p>{message}</p>
 
       <>
-        {/* <SelectAvatar onSelect={handleAvatarSelect} /> */}
-        <SelectAvatar />
+        <SelectAvatar onSelect={handleAvatarSelect} />
+        {/* <SelectAvatar /> */}
       </>
 
       <form onSubmit={handleSubmit}>
