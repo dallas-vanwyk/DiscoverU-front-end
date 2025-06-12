@@ -15,7 +15,7 @@ const Explore = () => {
               <Link to="/community">Posts</Link>
             </li>
             <li>
-              <Link to="/">My Network</Link>
+              <Link to="/network">My Network</Link>
             </li>
             <li>
               <Link to="/explore">Explore</Link>
