@@ -38,6 +38,4 @@ const YouTubePage = () => {
   );
 };
 
-// render(<App />, document.getElementById("root"));
-
 export default YouTubePage;

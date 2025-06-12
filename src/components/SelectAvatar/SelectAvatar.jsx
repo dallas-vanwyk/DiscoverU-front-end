@@ -1,7 +1,9 @@
 // src/components/SelectAvatar/SelectAvatar.jsx
 
+import { useContext } from "react";
 import { useState } from "react";
 import { FaEdit } from "react-icons/fa";
+import { UserContext } from "../../contexts/UserContext";
 
 
 const avatarFiles = [
@@ -20,6 +22,11 @@ const avatarFiles = [
 ];
 
 const SelectAvatar = ({ onSelect }) => {
+
+  const { user, setUser } = useContext(UserContext);
+
+  
+
   const [avatar, setAvatar] = useState(null);
 
   const handleSelection = (filename) => {
