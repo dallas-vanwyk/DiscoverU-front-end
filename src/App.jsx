@@ -8,10 +8,14 @@ import Landing from "./components/Landing/Landing";
 import HomePage from "./components/HomePage/HomePage";
 import PersonalityTest from "./components/PersonalityTest/PersonalityTest.jsx";
 import Game from "./components/Game/Game.jsx";
+
 import CommunityList from "./components/CommunityList/CommunityList.jsx";
 import CommunityDetails from "./components/CommunityDetails/CommunityDetails.jsx";
 import CommunityPostForm from "./components/CommunityPostForm/CommunityPostForm.jsx";
 import * as postService from "./services/postService.js";
+
+import MyNetwork from "./components/MyNetwork/MyNetwork.jsx"
+
 
 import Explore from "./components/Explore/Explore.jsx";
 
@@ -62,6 +66,7 @@ const App = () => {
         <Route path="/city" element={<Game />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/users/:userId/edit" element={<EditProfile />} />
+
         <Route path="/community" element={<CommunityList posts={posts} />} />
         <Route
           path="/posts/:postId"
@@ -75,6 +80,9 @@ const App = () => {
           path="/posts/:postId/edit"
           element={<CommunityPostForm handleUpdatePost={handleUpdatePost} />}
         />
+
+        <Route path="/network" element={<MyNetwork/>} />
+
       </Routes>
     </>
   );
