@@ -21,7 +21,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/community">
               <img src="/images/icons/Network.svg" alt="Network" />
             </Link>
           </li>
