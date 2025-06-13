@@ -16,7 +16,7 @@ const avatarFiles = [
   "avatar10.svg",
   "avatar11.svg",
   "avatar12.svg",
-  "default-avatar.svg",
+  // "default-avatar.svg",
 ];
 
 const SelectAvatar = ({ onSelect }) => {
