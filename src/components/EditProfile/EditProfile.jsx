@@ -39,7 +39,7 @@ const EditProfile = () => {
   };
 
   return (
-    <main className="mainpage" style={{ padding: "0", marginBottom: "1rem" }}>
+    <main className="mainpage" style={{ padding: "0" }}>
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
       <h2 className="heading-no-bills">Edit Profile</h2>

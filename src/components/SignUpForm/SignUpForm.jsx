@@ -50,7 +50,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <main className="mainpage">
+    <main className="mainpage" style={{ padding: "0" }}>
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
       <p>{message}</p>
@@ -63,19 +63,32 @@ const SignUpForm = () => {
         <form onSubmit={handleSubmit}>
           <h1 className="heading-no-bills">Create Account</h1>
 
-          <img
-            src={`/images/avatars/${formData.avatar}`}
-            alt="Selected Avatar"
-            style={{ width: "80px", borderRadius: "50%", marginBottom: "1rem" }}
-          />
+          <div className="floating-content flex-box">
+            <button
+              type="button"
+              style={{
+                background: "none",
+                border: "none",
+              }}
+              onClick={() => setFormData({ ...formData, avatar: "" })}
+            >
+              <div className="avatar-box">
+                <div className="avatar-parent">
+                  <div className="avatar-circle"></div>
 
+                  <img
+                    src={`/images/avatars/${formData.avatar}`}
+                    alt="Selected Avatar"
+                    className="avatar-image"
+                  />
+                </div>
+              </div>
 
-          <button
-            type="button"
-            onClick={() => setFormData({ ...formData, avatar: "" })}
-          >
-            Select Avatar <FaEdit />
-          </button>
+              <p style={{ color: "white" }}>
+                <FaEdit /> Change Avatar
+              </p>
+            </button>
+          </div>
 
           <div className="white-form floating-content">
             <div>
@@ -152,10 +165,10 @@ const SignUpForm = () => {
 
             <div>
               <button className="button-pink" disabled={isFormInvalid()}>
-                Sign Up
+                SIGN UP
               </button>
               <button className="button-pink" onClick={() => navigate("/")}>
-                Cancel
+                CANCEL
               </button>
             </div>
           </div>

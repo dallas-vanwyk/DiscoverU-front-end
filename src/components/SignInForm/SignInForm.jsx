@@ -40,19 +40,25 @@ const SignInForm = () => {
   };
 
   return (
-    <main className="mainpage">
+    <main className="mainpage" style={{ padding: "0" }}>
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
       <h1 className="heading-no-bills">Log In</h1>
+
       <img
         src="images/main-app/login.png"
         alt="people discussing at table"
         className="floating-content homepage-image"
       />
 
-      <div className="white-form floating-content">
+      <div>
         <p>{message}</p>
-        <form autoComplete="off" onSubmit={handleSubmit}>
+
+        <form
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          className="white-form floating-content"
+        >
           <div>
             <label htmlFor="username">Email or Username</label>
             <input
@@ -78,8 +84,10 @@ const SignInForm = () => {
               required
             />
           </div>
+
           <div>
             <button className="button-pink">NEXT</button>
+
             <button className="button-pink" onClick={() => navigate("/")}>
               CANCEL
             </button>
