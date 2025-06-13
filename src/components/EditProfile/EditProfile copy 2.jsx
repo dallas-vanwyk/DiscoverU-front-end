@@ -1,13 +1,12 @@
 // src/components/EditProfile/EditProfile.jsx
-// this is Zeb's original way
+// copy of Dallas's messing with it
 
 import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import SelectAvatar from "../SelectAvatar/SelectAvatar.jsx";
-import { useNavigate } from "react-router";
 import { update } from "../../services/userService.js";
-// import { FaEdit } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 const EditProfile = () => {
   const { user, setUser } = useContext(UserContext);
@@ -37,17 +36,18 @@ const EditProfile = () => {
       setMessage(error.message);
     }
   };
-  
+
   return (
-    <main className="mainpage" style={{ padding: '0', marginBottom: '1rem' }}>
+    <main className="mainpage">
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
-      <h2 className="heading-no-bills">Edit Profile</h2>
+      <h1 className="heading-no-bills">Account</h1>
+
       <p className="message">{message}</p>
 
       {!formData.avatar ? (
         <>
-          <h3>Select an Avatar</h3>
+          <h3 className="heading-no-bills">Select Avatar</h3>
           <SelectAvatar onSelect={handleAvatarSelect} />
         </>
       ) : (
@@ -61,7 +61,7 @@ const EditProfile = () => {
                 className="avatar-image"
               />
             </div>
-            {/* <FaEdit /> */}
+            <FaEdit />
           </div>
 
           <button
@@ -74,7 +74,7 @@ const EditProfile = () => {
 
           <div className="white-form floating-content">
             <div>
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
                 id="username"
@@ -86,7 +86,7 @@ const EditProfile = () => {
             </div>
 
             <div>
-              <label htmlFor="firstname">First Name:</label>
+              <label htmlFor="firstname">First Name</label>
               <input
                 type="text"
                 name="firstname"
@@ -98,7 +98,7 @@ const EditProfile = () => {
             </div>
 
             <div>
-              <label htmlFor="lastname">Last Name:</label>
+              <label htmlFor="lastname">Last Name</label>
               <input
                 type="text"
                 name="lastname"
@@ -110,7 +110,7 @@ const EditProfile = () => {
             </div>
 
             <div>
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="email"
@@ -121,12 +121,18 @@ const EditProfile = () => {
               />
             </div>
 
-            <button className="button-pink" type="submit">
-              Save Changes
-            </button>
+            <div>
+              <button type="submit" className="button-pink">
+                SAVE
+              </button>
+              <button className="button-pink" onClick={() => navigate("/")}>
+                Cancel
+              </button>
+            </div>
           </div>
         </form>
       )}
+      
     </main>
   );
 };

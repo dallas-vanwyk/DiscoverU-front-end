@@ -1,5 +1,5 @@
 // SignUpForm.jsx
-// COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY
+// backup copy of zeb's original way
 
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
