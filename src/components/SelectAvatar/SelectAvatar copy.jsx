@@ -1,5 +1,5 @@
 // src/components/SelectAvatar/SelectAvatar.jsx
-// COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY
+// backup copy of zeb's original way
 
 import { useState } from 'react';
 

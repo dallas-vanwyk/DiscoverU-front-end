@@ -1,11 +1,10 @@
 // src/components/EditProfile/EditProfile.jsx
-// this is Zeb's original way
+// copy of Dallas's messing with it
 
 import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import SelectAvatar from "../SelectAvatar/SelectAvatar.jsx";
-import { useNavigate } from "react-router";
 import { update } from "../../services/userService.js";
 import { FaEdit } from "react-icons/fa";
 
@@ -39,10 +38,11 @@ const EditProfile = () => {
   };
 
   return (
-    <main className="mainpage" style={{ padding: "0" }}>
+    <main className="mainpage">
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
-      <h2 className="heading-no-bills">Edit Profile</h2>
+      <h1 className="heading-no-bills">Account</h1>
+
       <p className="message">{message}</p>
 
       {!formData.avatar ? (
@@ -52,36 +52,29 @@ const EditProfile = () => {
         </>
       ) : (
         <form onSubmit={handleSubmit}>
-          <div className="floating-content flex-box">
-            <button
-              type="button"
-              style={{
-                background: "none",
-                border: "none",
-              }}
-              onClick={() => setFormData({ ...formData, avatar: "" })}
-            >
-              <div className="avatar-box">
-                <div className="avatar-parent">
-                  <div className="avatar-circle"></div>
-
-                  <img
-                    src={`/images/avatars/${formData.avatar}`}
-                    alt="Selected Avatar"
-                    className="avatar-image"
-                  />
-                </div>
-              </div>
-
-              <p style={{ color: "white" }}>
-                <FaEdit /> Change Avatar
-              </p>
-            </button>
+          <div className="avatar-box">
+            <div className="avatar-parent">
+              <div className="avatar-circle"></div>
+              <img
+                src={`/images/avatars/${formData.avatar}`}
+                alt="Selected Avatar"
+                className="avatar-image"
+              />
+            </div>
+            <FaEdit />
           </div>
+
+          <button
+            type="button"
+            className="button-avatar"
+            onClick={() => setFormData({ ...formData, avatar: "" })}
+          >
+            Change Avatar
+          </button>
 
           <div className="white-form floating-content">
             <div>
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
                 id="username"
@@ -93,7 +86,7 @@ const EditProfile = () => {
             </div>
 
             <div>
-              <label htmlFor="firstname">First Name:</label>
+              <label htmlFor="firstname">First Name</label>
               <input
                 type="text"
                 name="firstname"
@@ -105,7 +98,7 @@ const EditProfile = () => {
             </div>
 
             <div>
-              <label htmlFor="lastname">Last Name:</label>
+              <label htmlFor="lastname">Last Name</label>
               <input
                 type="text"
                 name="lastname"
@@ -117,7 +110,7 @@ const EditProfile = () => {
             </div>
 
             <div>
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="email"
@@ -128,15 +121,18 @@ const EditProfile = () => {
               />
             </div>
 
-            <button className="button-pink" type="submit">
-              SAVE
-            </button>
-            <button className="button-pink" onClick={() => navigate("/")}>
-              CANCEL
-            </button>
+            <div>
+              <button type="submit" className="button-pink">
+                SAVE
+              </button>
+              <button className="button-pink" onClick={() => navigate("/")}>
+                CANCEL
+              </button>
+            </div>
           </div>
         </form>
       )}
+      
     </main>
   );
 };
