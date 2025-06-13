@@ -1,4 +1,5 @@
 // src/components/EditProfile/EditProfile.jsx
+// COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY
 
 import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";

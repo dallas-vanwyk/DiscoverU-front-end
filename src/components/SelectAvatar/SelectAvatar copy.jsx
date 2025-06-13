@@ -1,4 +1,5 @@
 // src/components/SelectAvatar/SelectAvatar.jsx
+// COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY
 
 import { useState } from 'react';
 
