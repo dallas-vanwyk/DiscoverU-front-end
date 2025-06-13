@@ -3,6 +3,10 @@ import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import * as postService from "../../services/postService";
 import CommentForm from "../CommentForm/CommentForm";
+import TopNavBar from "../TopNavBar/TopNavBar";
+import NavBar from "../NavBar/NavBar";
+import NavTabs from "../NavTabs/NavTabs";
+import "./CommunityDetails.css";
 
 const CommunityDetails = (props) => {
   const { postId } = useParams();
@@ -33,52 +37,91 @@ const CommunityDetails = (props) => {
   if (!post) return <main>Loading...</main>;
 
   return (
-    <main>
-      <section>
-        <header>
-          <h1>{post.title}</h1>
-          <p>
-            {`${post.author.username} posted on
-            ${new Date(post.createdAt).toLocaleDateString()}`}
+    <>
+      <TopNavBar />
+      <main className="community-page">
+        <NavTabs />
+        <section className="post">
+          <header className="post-header">
+            <img
+              className="avatar"
+              src={`/images/avatars/${post.author.avatar}`}
+              alt={`${post.author.username}'s avatar`}
+            />
+            <div className="author-info">
+              <p className="author-name">{`${post.author.firstname} ${post.author.lastname}`}</p>
+              <p className="author-title">Aspiring Nurse</p>
+            </div>
+          </header>
+
+          <h1 className="post-title">{post.title}</h1>
+
+          <p className="post-text">{post.text}</p>
+
+          <p className="post-date">
+            {`${post.author.username} posted on ${new Date(
+              post.createdAt
+            ).toLocaleDateString()}`}
           </p>
-          {/* Add the following */}
+
           {post.author._id === user._id && (
-            <>
-              <Link to={`/posts/${postId}/edit`}>Edit</Link>
-              <button onClick={() => props.handleDeletePost(postId)}>
+            <div className="post-controls">
+              <Link to={`/posts/${postId}/edit`} className="edit-button">
+                Edit
+              </Link>
+              <button
+                className="delete-button"
+                onClick={() => props.handleDeletePost(postId)}
+              >
                 Delete Post
               </button>
-            </>
+            </div>
           )}
-        </header>
-        <p>{post.text}</p>
-      </section>
-      <section>
-        <h2>Comments</h2>
-        <CommentForm handleAddComment={handleAddComment} />
+        </section>
 
-        {!post.comments.length && <p>There are no comments.</p>}
+        <section className="post comments-section">
+          <h2 className="post-title">Comments</h2>
+          <CommentForm handleAddComment={handleAddComment} />
 
-        {post.comments.map((comment) => (
-          <article key={comment._id}>
-            <header>
-              <p>
-                {`${comment.author.username} posted on
-        ${new Date(comment.createdAt).toLocaleDateString()}`}
+          {!post.comments.length && (
+            <p className="post-text">There are no comments.</p>
+          )}
+
+          {post.comments.map((comment) => (
+            <article key={comment._id} className="post">
+              <header className="post-header">
+                <img
+                  className="avatar"
+                  src={`/images/avatars/${comment.author.avatar}`}
+                  alt={`${comment.author.username}'s avatar`}
+                />
+                <div className="author-info">
+                  <p className="author-name">
+                    {`${comment.author.firstname} ${comment.author.lastname}`}
+                  </p>
+                  <p className="author-title">Nurse</p>
+                </div>
+              </header>
+              <p className="post-date">
+                {`${new Date(comment.createdAt).toLocaleDateString()}`}
               </p>
+              <p className="post-text">{comment.text}</p>
               {post.author._id === user._id && (
-                <>
-                  <button onClick={() => handleDeleteComment(comment._id)}>
+                <div className="post-controls">
+                  <button
+                    className="delete-button"
+                    onClick={() => handleDeleteComment(comment._id)}
+                  >
                     Delete
                   </button>
-                </>
+                </div>
               )}
-            </header>
-            <p>{comment.text}</p>
-          </article>
-        ))}
-      </section>
-    </main>
+            </article>
+          ))}
+        </section>
+      </main>
+      <NavBar />
+    </>
   );
 };
 

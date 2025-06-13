@@ -1,0 +1,41 @@
+.post-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.edit-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  font-weight: bold;
+
+  line-height: 1.2;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.edit-button:hover {
+  background-color: #138496;
+}
+
+.delete-button {
+  padding: 0.4rem 0.8rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  font-weight: bold;
+
+  line-height: 1.2;
+  font-size: 0.9rem;
+  display: inline-block;
+  height: auto;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
