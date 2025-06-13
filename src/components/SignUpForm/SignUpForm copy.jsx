@@ -1,4 +1,5 @@
 // SignUpForm.jsx
+// COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY COPY
 
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router";

@@ -2,9 +2,8 @@
 
 import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import SelectAvatar from "../SelectAvatar/SelectAvatar.jsx";
-import { useNavigate } from "react-router";
 import { update } from "../../services/userService.js";
 import { FaEdit } from "react-icons/fa";
 

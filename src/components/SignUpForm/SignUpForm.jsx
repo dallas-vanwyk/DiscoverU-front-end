@@ -58,10 +58,17 @@ const SignUpForm = () => {
 
       <>
         <SelectAvatar onSelect={handleAvatarSelect} />
-        {/* <SelectAvatar /> */}
       </>
 
       <form onSubmit={handleSubmit}>
+        <img
+          src={`/images/avatars/${
+            formData.avatar ? formData.avatar : "default-avatar.svg"
+          }`}
+          alt="Selected Avatar"
+          style={{ width: "80px", borderRadius: "50%", marginBottom: "1rem" }}
+        />
+
         <div className="white-form floating-content">
           <div>
             <label htmlFor="username">Username</label>

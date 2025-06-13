@@ -22,6 +22,7 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/community">
+            {/* <Link to="/network"> */}
               <img src="/images/icons/Network.svg" alt="Network" />
             </Link>
           </li>

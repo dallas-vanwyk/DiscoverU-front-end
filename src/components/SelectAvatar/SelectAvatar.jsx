@@ -30,11 +30,19 @@ const SelectAvatar = ({ onSelect }) => {
     onSelect(filename);
   };
 
+  try {
+    console.log(user)
+    console.log(user.avatar ? "true" : "false")
+  } catch (err) {
+    console.log(err.message);
+  }
+
+
+
   return (
     <div>
       {/* if initial page load or avatar has been selected */}
 
-      {console.log(user.avatar ? "true" : "false")}
 
       <img
         // src={`/images/avatars/${formData.avatar}`}
