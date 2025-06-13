@@ -31,12 +31,12 @@ const TopNavBar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" className="test-white">
+          <Link to="/coming-soon" className="test-white">
             Messages
           </Link>
         </li>
         <li>
-          <Link to="/" className="test-white">
+          <Link to="/coming-soon" className="test-white">
             Progress Tracker
           </Link>
         </li>

@@ -20,6 +20,7 @@ import Explore from "./components/Explore/Explore.jsx";
 import EditProfile from "./components/EditProfile/EditProfile.jsx";
 import YouTubePage from "./components/YouTubePage/YouTubePage.jsx";
 import { UserContext } from "./contexts/UserContext.jsx";
+import ComingSoon from "./components/ComingSoon/ComingSoon.jsx";
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -91,6 +92,7 @@ const App = () => {
             element={<CommunityPostForm handleUpdatePost={handleUpdatePost} />}
           />
           <Route path="/network" element={<MyNetwork />} />
+          <Route path="/coming-soon" element={<ComingSoon/>} />
         </Routes>
       </Wrapper>
     </>
