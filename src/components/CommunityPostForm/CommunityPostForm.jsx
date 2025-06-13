@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 
 import * as postService from "../../services/postService";
 
 const PostForm = (props) => {
   const { postId } = useParams();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
     text: "",
@@ -56,6 +57,9 @@ const PostForm = (props) => {
         />
 
         <button type="submit">Post</button>
+        <button type="button" onClick={() => navigate(-1)}>
+          Back
+        </button>
       </form>
     </main>
   );
