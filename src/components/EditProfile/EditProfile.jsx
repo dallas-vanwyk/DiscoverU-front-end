@@ -7,7 +7,7 @@ import { useParams } from "react-router";
 import SelectAvatar from "../SelectAvatar/SelectAvatar.jsx";
 import { useNavigate } from "react-router";
 import { update } from "../../services/userService.js";
-// import { FaEdit } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 const EditProfile = () => {
   const { user, setUser } = useContext(UserContext);
@@ -37,9 +37,9 @@ const EditProfile = () => {
       setMessage(error.message);
     }
   };
-  
+
   return (
-    <main className="mainpage" style={{ padding: '0', marginBottom: '1rem' }}>
+    <main className="mainpage" style={{ padding: "0", marginBottom: "1rem" }}>
       <style>{"body{background: var(--pbg-grad)}"}</style>
 
       <h2 className="heading-no-bills">Edit Profile</h2>
@@ -47,30 +47,37 @@ const EditProfile = () => {
 
       {!formData.avatar ? (
         <>
-          <h3>Select an Avatar</h3>
+          <h3 className="heading-no-bills">Select Avatar</h3>
           <SelectAvatar onSelect={handleAvatarSelect} />
         </>
       ) : (
         <form onSubmit={handleSubmit}>
-          <div className="avatar-box">
-            <div className="avatar-parent">
-              <div className="avatar-circle"></div>
-              <img
-                src={`/images/avatars/${formData.avatar}`}
-                alt="Selected Avatar"
-                className="avatar-image"
-              />
-            </div>
-            {/* <FaEdit /> */}
-          </div>
+          <div className="floating-content flex-box">
+            <button
+              type="button"
+              style={{
+                background: "none",
+                border: "none",
+              }}
+              onClick={() => setFormData({ ...formData, avatar: "" })}
+            >
+              <div className="avatar-box">
+                <div className="avatar-parent">
+                  <div className="avatar-circle"></div>
 
-          <button
-            type="button"
-            className="button-avatar"
-            onClick={() => setFormData({ ...formData, avatar: "" })}
-          >
-            Change Avatar
-          </button>
+                  <img
+                    src={`/images/avatars/${formData.avatar}`}
+                    alt="Selected Avatar"
+                    className="avatar-image"
+                  />
+                </div>
+              </div>
+
+              <p style={{ color: "white" }}>
+                <FaEdit /> Change Avatar
+              </p>
+            </button>
+          </div>
 
           <div className="white-form floating-content">
             <div>
@@ -122,7 +129,10 @@ const EditProfile = () => {
             </div>
 
             <button className="button-pink" type="submit">
-              Save Changes
+              SAVE
+            </button>
+            <button className="button-pink" onClick={() => navigate("/")}>
+              CANCEL
             </button>
           </div>
         </form>

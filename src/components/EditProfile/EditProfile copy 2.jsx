@@ -126,7 +126,7 @@ const EditProfile = () => {
                 SAVE
               </button>
               <button className="button-pink" onClick={() => navigate("/")}>
-                Cancel
+                CANCEL
               </button>
             </div>
           </div>
