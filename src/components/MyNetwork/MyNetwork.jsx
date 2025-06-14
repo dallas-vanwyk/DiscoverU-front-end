@@ -88,7 +88,7 @@ const MyNetwork = () => {
       <TopNavBar />
 
       <main className="mainpage" style={{
-    backgroundColor: "var(--menu-background)",
+    backgroundColor: "#c7d3ff",
     minHeight: "100vh", // Ensures full viewport height
   }}>
         <NavTabs />

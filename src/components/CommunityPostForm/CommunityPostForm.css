@@ -1,0 +1,68 @@
+/* CommunityPostForm.css */
+
+.post-form-page {
+  background-color: #c7d3ff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-form-container {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+.post-form-container h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.post-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-form-container label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.post-form-container input,
+.post-form-container textarea {
+  margin-bottom: 1.2rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.post-form-container textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.post-form-container button {
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #4f0067;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.post-form-container button[type="button"] {
+  background-color: #999;
+}
+
+.post-form-container button:hover {
+  opacity: 0.9;
+}
