@@ -11,7 +11,7 @@ const ComingSoon = () => {
 		<div style={styles.container}>
 			{user?.avatar && (
 				<img
-					 src={`/images/avatars/${user.avatar}`}
+					src={`/images/avatars/${user.avatar}`}
 					alt={`${user.username} avatar`}
 					style={styles.avatar}
 				/>
@@ -21,7 +21,7 @@ const ComingSoon = () => {
 				Hey {user?.username}, we're still working on this page. Thanks for your
 				patience!
 			</p>
-<NavBar />
+			<NavBar />
 		</div>
 	);
 };
@@ -29,9 +29,15 @@ const ComingSoon = () => {
 const styles = {
 	container: {
 		textAlign: "center",
-		marginTop: "5rem",
-		fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-		color: "#444",
+		margin: 0,
+		color: "#fff",
+		background: "var(--pbg-grad)",
+		minHeight: "100vh",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		background: "var(--pbg-grad)",
 	},
 	avatar: {
 		width: 120,

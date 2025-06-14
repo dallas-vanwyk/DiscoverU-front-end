@@ -187,7 +187,7 @@ const Explore = () => {
           <div>
             <h2 className="heading-no-bills">Ask Dixie</h2>
 
-            <button className="button-dixie" onClick={() => navigate("/")}>
+            <button className="button-dixie" onClick={() => navigate("/coming-soon")}>
               Learn More With Dixie
             </button>
           </div>
