@@ -1,6 +1,7 @@
 // src/components/HomePage.jsx
 
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
 import NavBar from "../NavBar/NavBar.jsx";
 import TopNavBar from "../TopNavBar/TopNavBar.jsx";
 

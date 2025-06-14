@@ -99,7 +99,7 @@ This project proved to be more challenging than we initially anticipated—espec
 ## <a name="designers">The Design Team Behind DiscoverU</a>
 * Diana [LinkedIn](https://www.linkedin.com/in/diana-madden/)
 * Will [LinkedIn](https://www.linkedin.com/in/william-speights-6a1b9814/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-* Michele [LinkedIn]()
+* Michele [LinkedIn](http://linkedin.com/in/mibanibo)
 
 The visual identity and user experience of DiscoverU were brought to life by our talented team of UI/UX designers who played a central role in the project's development. From the early stages, the design team spearheaded communication with the student group that conceptualized the app, working to understand the vision and translate it into a clear, engaging user interface.
 

@@ -1,53 +1,20 @@
-// src/components/Landing.jsx
-
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
+import './Landing.css';
 
 const Landing = () => {
   const navigate = useNavigate();
   const [showSplash, setShowSplash] = useState(true);
 
-   useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 2500); // show splash for 2.5 seconds
+    }, 2500);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="flex-box">
-           <style>{`
-        body {
-          background: var(--pbg-grad);
-          margin: 0;
-          font-family: 'Post No Bills Colombo', serif;
-        }
-
-        .splash-screen {
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: var(--pbg-grad);
-        }
-
-        .splash-text {
-          font-size: 4rem;
-          color: white;
-          text-align: center;
-          animation: fadeIn 1s ease-in-out;
-        }
-
-        .floating-content.landing {
-          animation: fadeIn 1s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
-      
       <main className="mainpage">
         {showSplash ? (
           <div className="splash-screen">
