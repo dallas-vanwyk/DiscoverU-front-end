@@ -285,7 +285,8 @@ const Game = () => {
             </div>
             <form className="game-form">
               <div>
-                <input className="game-input"
+                <input
+                  className="game-input"
                   type="text"
                   autoComplete="off"
                   id="textField"
