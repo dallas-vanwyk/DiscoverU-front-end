@@ -27,7 +27,7 @@ const GameNavbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/communtiy" className="test-white">
+          <Link to="/community" className="test-white">
             Network
           </Link>
         </li>
