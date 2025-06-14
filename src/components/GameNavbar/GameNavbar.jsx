@@ -22,22 +22,32 @@ const GameNavbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="test-white">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/">Network</Link>
+          <Link to="/communtiy" className="test-white">
+            Network
+          </Link>
         </li>
         <li>
-          <Link to="/">Explore</Link>
+          <Link to="/explore" className="test-white">
+            Explore
+          </Link>
         </li>
         <li>
-          <Link to="/">Messages</Link>
+          <Link to="/comming-soon" className="test-white">
+            Messages
+          </Link>
         </li>
         <li>
-          <Link to="/">Progress Tracker</Link>
+          <Link to="/comming-soon" className="test-white">
+            Progress Tracker
+          </Link>
         </li>
         <li>
-          <Link to="/" onClick={handleSignOut}>
+          <Link to="/" className="test-white" onClick={handleSignOut}>
             Sign Out
           </Link>
         </li>
