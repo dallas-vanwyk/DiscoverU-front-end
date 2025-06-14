@@ -1,0 +1,27 @@
+/* ComingSoon.css */
+
+.comingsoon-container {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  background: var(--pbg-grad);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comingsoon-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #007bff;
+}
+
+.comingsoon-message {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
