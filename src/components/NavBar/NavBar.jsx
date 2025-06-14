@@ -17,13 +17,13 @@ const NavBar = () => {
         <ul>
           <li>
             <Link to="/">
-              <img src="/images/icons/Home.svg" alt="Home" />
+              <img src="/images/icons/home.svg" alt="Home" />
             </Link>
           </li>
           <li>
             <Link to="/community">
             {/* <Link to="/network"> */}
-              <img src="/images/icons/Network.svg" alt="Network" />
+              <img src="/images/icons/network.svg" alt="Network" />
             </Link>
           </li>
           <li>

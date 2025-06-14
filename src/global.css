@@ -17,6 +17,7 @@
   --avatar-size: 300px;
 
   /* stuff from default index.css - not 100% sure what to keep */
+  /* font-family: system-ui, Helvetica, Arial, sans-serif; */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-synthesis: none;
