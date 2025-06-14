@@ -1,5 +1,24 @@
-/* CommunityPostForm.css */
+/* Reset box sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Autofill fix */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background-color: white !important;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Optional autofill fallback (non-standard) */
+input:-internal-autofill-selected {
+  background-color: white !important;
+}
+
+/* Page wrapper */
 .post-form-page {
   background-color: #c7d3ff;
   min-height: 100vh;
@@ -9,6 +28,7 @@
   align-items: center;
 }
 
+/* Form container */
 .post-form-container {
   background-color: white;
   padding: 2rem 2.5rem;
@@ -18,35 +38,53 @@
   width: 100%;
 }
 
+/* Heading */
 .post-form-container h1 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
+/* Form layout */
 .post-form-container form {
   display: flex;
   flex-direction: column;
 }
 
+/* Label styling */
 .post-form-container label {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
+/* Inputs & Textareas */
 .post-form-container input,
 .post-form-container textarea {
-  margin-bottom: 1.2rem;
+  width: 100%;
+  max-width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  margin-bottom: 1.2rem;
+  display: block;
+  line-height: 1.5;
+  background-color: white;
 }
 
+/* Title input specific styling for debug (remove border after test) */
+#title-input {
+  /* Remove this once fixed */
+  outline: none;
+}
+
+/* Textarea specifics */
 .post-form-container textarea {
   resize: vertical;
   min-height: 100px;
+  height: auto;
 }
 
+/* Buttons */
 .post-form-container button {
   padding: 0.75rem;
   margin-top: 0.5rem;
@@ -59,10 +97,12 @@
   transition: background-color 0.2s ease;
 }
 
+/* Secondary button */
 .post-form-container button[type="button"] {
   background-color: #999;
 }
 
+/* Hover effect */
 .post-form-container button:hover {
   opacity: 0.9;
 }
