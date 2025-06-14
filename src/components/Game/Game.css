@@ -239,14 +239,14 @@ button {
   align-items: center;
 }
 
-form {
+.game-form {
   margin-right: 175px;
   display: flex;
   align-items: center;
   align-items: center;
 }
 
-input {
+.game-input {
   box-sizing: border-box;
   height: 100px;
   width: 600px;
