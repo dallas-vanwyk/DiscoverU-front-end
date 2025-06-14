@@ -1,9 +1,15 @@
 /* MyNetwork.css */
 
 .network-page {
-  background-color: #c7d3ff;
+  background-color: #C7D3FF;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
   min-height: 100vh;
-  padding: 1rem;
+  padding-top: var(--top-navbar-height);
+  padding-bottom: var(--bottom-navbar-height);
+  box-sizing: border-box;
+  position: relative;
 }
 
 .network-container h1 {
